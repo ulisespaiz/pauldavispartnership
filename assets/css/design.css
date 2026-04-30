@@ -1,0 +1,521 @@
+/* ============================================================
+   Paul Davis Partnership — design.css
+   Design page section styles
+   Mirrors index.css + sustainability.css design patterns
+   ============================================================ */
+
+/* ==================== PAGE HERO ==================== */
+.dsgn-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.dsgn-hero-inner {
+  max-width: var(--pdp-max-width);
+  margin: 0 auto;
+  padding: var(--pdp-sp-3xl) var(--pdp-side-padding) var(--pdp-sp-lg);
+  width: 100%;
+}
+
+.dsgn-eyebrow {
+  display: inline-block;
+  font-size: var(--pdp-size-2xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pdp-teal);
+  margin-bottom: var(--pdp-sp-md);
+  padding-bottom: var(--pdp-sp-sm);
+  border-bottom: 1px solid rgba(60, 121, 125, 0.35);
+}
+
+.dsgn-hero-title {
+  font-family: var(--pdp-font-display);
+  font-size: clamp(44px, 6vw, 88px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--pdp-teal-dark);
+  margin-bottom: var(--pdp-sp-lg);
+  letter-spacing: -0.02em;
+}
+
+.dsgn-hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--pdp-teal);
+}
+
+.dsgn-hero-subtitle {
+  font-size: var(--pdp-size-lg);
+  color: var(--pdp-gray-700);
+  line-height: 1.65;
+  max-width: 850px;
+  margin-bottom: var(--pdp-sp-xl);
+  font-weight: 300;
+}
+
+/* Hero image */
+.dsgn-hero-image-wrap {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  min-height: 380px;
+  position: relative;
+}
+
+.dsgn-hero-image-wrap a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dsgn-hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  min-height: 300px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Step counter bar — mirrors .hero-stats */
+.dsgn-hero-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  background-color: var(--pdp-teal-dark);
+  width: 100%;
+}
+
+.dsgn-hero-stat {
+  background-color: var(--pdp-teal);
+  padding: var(--pdp-sp-md) var(--pdp-sp-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.dsgn-stat-number {
+  font-family: var(--pdp-font-display);
+  font-size: var(--pdp-size-2xl);
+  font-weight: 400;
+  color: var(--pdp-white);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+
+.dsgn-stat-label {
+  font-size: var(--pdp-size-xs);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.03em;
+  max-width: 160px;
+  line-height: 1.3;
+}
+
+/* ==================== PROCESS STEPS — stacked image-above layout ==================== */
+.dsgn-process-section {
+  padding: 0;
+  overflow: hidden;
+}
+
+.dsgn-process-wrap {
+  max-width: var(--pdp-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each step card: full-width image on top, text body below */
+.dsgn-step-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  border-bottom: 1px solid var(--pdp-rule);
+  background-color: var(--pdp-white);
+  overflow: hidden;
+}
+
+.dsgn-step-card:last-child {
+  border-bottom: none;
+}
+
+/* --flip class no longer changes layout — image is always in DOM order first */
+.dsgn-step-card--flip .dsgn-step-img-wrap {
+  order: 0;
+}
+.dsgn-step-card--flip .dsgn-step-body {
+  order: 1;
+}
+
+/* Image panel — full width, fixed 16:6 landscape aspect ratio */
+.dsgn-step-img-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 6;
+  background-color: var(--pdp-gray-100);
+  border-bottom: 1px solid var(--pdp-rule);
+}
+
+.dsgn-step-img-wrap a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dsgn-step-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: grayscale(15%);
+  transition:
+    transform 0.75s ease,
+    filter 0.5s ease;
+}
+
+/* Text body — two-column grid inside for wide screens */
+.dsgn-step-body {
+  padding: var(--pdp-sp-4xl) var(--pdp-sp-3xl);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--pdp-sp-5xl);
+  align-items: start;
+  background-color: var(--pdp-white);
+  transition: background-color 0.3s;
+}
+
+/* Step number + title live in the left column */
+.dsgn-step-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pdp-sp-md);
+  position: sticky;
+  top: 32px;
+}
+
+/* Step number */
+.dsgn-step-number {
+  font-family: var(--pdp-font-display);
+  font-size: var(--pdp-size-3xl);
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: var(--pdp-teal);
+  display: block;
+  opacity: 0.6;
+  line-height: 1;
+}
+
+/* Step title */
+.dsgn-step-title {
+  font-family: var(--pdp-font-display);
+  font-size: clamp(22px, 2vw, 34px);
+  font-weight: 400;
+  color: var(--pdp-teal-dark);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  transition: color 0.2s;
+}
+
+.dsgn-step-card:hover .dsgn-step-title {
+  color: var(--pdp-teal);
+}
+
+/* Right column: all content */
+.dsgn-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pdp-sp-xl);
+}
+
+/* Step text paragraphs */
+.dsgn-step-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pdp-sp-md);
+}
+
+.dsgn-step-text p {
+  font-size: var(--pdp-size-lg);
+  color: var(--pdp-gray-700);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.dsgn-step-text p strong {
+  color: var(--pdp-teal-dark);
+  font-weight: 500;
+}
+
+/* Sub-items (Building Permits, Bidding) */
+.dsgn-step-sub-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--pdp-rule);
+}
+
+.dsgn-step-sub-item {
+  padding: var(--pdp-sp-lg) 0;
+  border-bottom: 1px solid var(--pdp-gray-100);
+}
+
+.dsgn-step-sub-item:last-child {
+  border-bottom: none;
+}
+
+.dsgn-sub-label {
+  display: inline-block;
+  font-size: var(--pdp-size-2xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pdp-teal);
+  margin-bottom: var(--pdp-sp-xs);
+}
+
+.dsgn-step-sub-item p {
+  font-size: var(--pdp-size-lg);
+  color: var(--pdp-gray-700);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* Bullet list — construction services */
+.dsgn-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--pdp-rule);
+}
+
+.dsgn-step-list li {
+  font-size: var(--pdp-size-lg);
+  color: var(--pdp-gray-700);
+  padding: 11px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--pdp-sp-sm);
+  line-height: 1.65;
+  font-weight: 300;
+  border-bottom: 1px solid var(--pdp-gray-100);
+  transition: color 0.2s;
+}
+
+.dsgn-step-list li:last-child {
+  border-bottom: none;
+}
+
+/* Dash marker */
+.dsgn-step-list li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--pdp-teal-muted);
+  flex-shrink: 0;
+  margin-top: 10px;
+  transition:
+    background-color 0.2s,
+    width 0.25s;
+}
+
+/* ==================== CTA — mirrors contact section ==================== */
+.dsgn-cta-section {
+  background-color: var(--pdp-teal-pale);
+  padding: var(--pdp-sp-5xl) 0;
+}
+
+.dsgn-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--pdp-sp-5xl);
+  align-items: center;
+}
+
+.dsgn-cta-heading {
+  font-family: var(--pdp-font-display);
+  font-size: clamp(32px, 3vw, 52px);
+  font-weight: 400;
+  color: var(--pdp-teal-dark);
+  margin-top: var(--pdp-sp-sm);
+  margin-bottom: var(--pdp-sp-lg);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.dsgn-cta-body {
+  font-size: var(--pdp-size-base);
+  color: var(--pdp-teal-dark);
+  opacity: 0.7;
+  line-height: 1.75;
+}
+
+.dsgn-cta-right-block {
+  background-color: var(--pdp-teal);
+  padding: var(--pdp-sp-4xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--pdp-sp-xl);
+  position: relative;
+}
+
+.dsgn-cta-right-block::before {
+  content: "EST. 1984";
+  position: absolute;
+  bottom: var(--pdp-sp-xl);
+  right: var(--pdp-sp-xl);
+  font-size: var(--pdp-size-2xs);
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.dsgn-cta-right-heading {
+  font-family: var(--pdp-font-display);
+  font-size: clamp(28px, 2.5vw, 42px);
+  font-weight: 400;
+  color: var(--pdp-white);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.dsgn-cta-right-text {
+  font-size: var(--pdp-size-sm);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.75;
+}
+
+.dsgn-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--pdp-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pdp-white);
+  padding: 14px var(--pdp-sp-xl);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: fit-content;
+  margin-top: var(--pdp-sp-sm);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.dsgn-cta-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .dsgn-step-body {
+    grid-template-columns: 220px 1fr;
+    gap: var(--pdp-sp-3xl);
+    padding: var(--pdp-sp-3xl) var(--pdp-sp-2xl);
+  }
+
+  .dsgn-step-img-wrap {
+    aspect-ratio: 16 / 7;
+  }
+
+  .dsgn-cta-inner {
+    grid-template-columns: 1fr;
+    gap: var(--pdp-sp-3xl);
+  }
+}
+
+@media (max-width: 900px) {
+  .dsgn-hero-stats {
+    flex-wrap: wrap;
+  }
+
+  .dsgn-hero-stat {
+    flex: 1 1 calc(50% - 1px);
+    min-width: 0;
+  }
+
+  .dsgn-step-body {
+    grid-template-columns: 1fr;
+    gap: var(--pdp-sp-xl);
+    padding: var(--pdp-sp-3xl) var(--pdp-sp-xl);
+  }
+
+  .dsgn-step-header {
+    position: relative;
+    top: auto;
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--pdp-sp-lg);
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--pdp-rule);
+    padding-bottom: var(--pdp-sp-lg);
+  }
+
+  .dsgn-step-img-wrap {
+    aspect-ratio: 16 / 8;
+  }
+}
+
+@media (max-width: 768px) {
+  .dsgn-step-body {
+    padding: var(--pdp-sp-2xl) var(--pdp-sp-lg);
+  }
+
+  .dsgn-step-img-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  .dsgn-cta-right-block {
+    padding: var(--pdp-sp-3xl) var(--pdp-sp-xl);
+  }
+}
+
+@media (max-width: 580px) {
+  .dsgn-hero-stat {
+    flex: 1 1 100%;
+  }
+
+  .dsgn-hero-stats {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .dsgn-step-body {
+    padding: var(--pdp-sp-xl) var(--pdp-sp-md);
+  }
+
+  .dsgn-step-img-wrap {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ==================== MOBILE HERO IMAGE PAN ==================== */
+/* On mobile only: slowly pan the hero image left → right → left  */
+@keyframes pdp-hero-pan {
+  0% {
+    object-position: left center;
+  }
+  50% {
+    object-position: right center;
+  }
+  100% {
+    object-position: left center;
+  }
+}
+
+@media (max-width: 768px) {
+  .dsgn-hero-image {
+    object-position: left center;
+    animation: pdp-hero-pan 35s ease-in-out infinite;
+  }
+}

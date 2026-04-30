@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — The Paul Davis Partnership</title>
+    <meta
+      name="description"
+      content="Explore the full portfolio of The Paul Davis Partnership — historic restorations, mixed-use, multi-family housing, civic, commercial, and custom residential projects in Monterey County and beyond."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/projects.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+     HEADER
+     ============================================================ -->
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="index.html" aria-label="Paul Davis Partnership – Home">
+            <img
+              src="assets/img/pauldavislogo.webp"
+              alt="The Paul Davis Partnership"
+            />
+          </a>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="sustainability.html" class="nav-link">Sustainability</a>
+          <a href="design.html" class="nav-link">Design</a>
+          <a href="philosophy.html" class="nav-link">Philosophy</a>
+          <a href="contact.html" class="nav-cta">Contact</a>
+        </nav>
+
+        <button
+          class="mobile-toggle"
+          id="mobileToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+     PAGE HERO
+     ============================================================ -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <span class="page-hero-eyebrow"
+          >Our Work · Monterey County &amp; Beyond</span
+        >
+        <h1 class="page-hero-title">Our <em>Projects</em></h1>
+        <p class="page-hero-subtitle">
+          The Essence of Excellence in Every Project — from historic
+          restorations and affordable housing to civic institutions, commercial
+          spaces, and custom residences.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     PROJECTS GALLERY
+     ============================================================ -->
+    <section class="projects-page-section">
+      <div class="projects-page-inner">
+        <!-- Filter Tabs -->
+        <div
+          class="filter-bar"
+          role="tablist"
+          aria-label="Filter projects by category"
+        >
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="historic"
+            role="tab"
+            aria-selected="false"
+          >
+            Historic
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="mixed-use"
+            role="tab"
+            aria-selected="false"
+          >
+            Mixed Use
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="multi-family"
+            role="tab"
+            aria-selected="false"
+          >
+            Multi-Family &amp; Affordable Housing
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="hospitality"
+            role="tab"
+            aria-selected="false"
+          >
+            Hospitality
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="commercial"
+            role="tab"
+            aria-selected="false"
+          >
+            Commercial
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="civic"
+            role="tab"
+            aria-selected="false"
+          >
+            Civic
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="custom"
+            role="tab"
+            aria-selected="false"
+          >
+            Custom
+          </button>
+        </div>
+
+        <!-- Results count -->
+        <p class="filter-count">
+          <strong id="resultCount">11</strong> projects
+        </p>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- 1. Holman Ranch -->
+          <a
+            href="holman-ranch-carmel-valley.html"
+            class="gallery-card"
+            data-category="historic"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/holman1.jpg"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="Holman Ranch, Carmel Valley"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Restoration of a 6,000 SF hacienda originally built in 1928
+                  for San Francisco businessman Gordon Armsby — brought back to
+                  its historic era.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Historic</div>
+                <div class="gallery-card-name">Holman Ranch, Carmel Valley</div>
+              </div>
+              <span class="gallery-card-arrow">See more</span>
+            </div>
+          </a>
+
+          <!-- 2. 286 Eldorado Street -->
+          <a
+            href="286-eldorado-street.html"
+            class="gallery-card"
+            data-category="mixed-use"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/pdpbuilding.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="286 Eldorado Street"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Completed in 2000 — 4,608 SF mixed-use building with 2,932 SF
+                  of commercial office space and a 1,675 SF private residence
+                  above. Underground parking garage keeps parking on site.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Mixed Use</div>
+                <div class="gallery-card-name">286 Eldorado Street</div>
+              </div>
+              <span class="gallery-card-arrow">See more</span>
+            </div>
+          </a>
+
+          <!-- 3. La Gloria Senior Apartments -->
+          <a
+            href="la-gloria-senior-apartments.html"
+            class="gallery-card"
+            data-category="multi-family"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/Chispa-La-Gloria-web.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="La Gloria Senior Apartments"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Completed in 2011 — 23 one-bedroom units with a Residents'
+                  Center, community meeting room, laundry room, and community
+                  garden.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">
+                  Multi-Family &amp; Affordable Housing
+                </div>
+                <div class="gallery-card-name">La Gloria Senior Apartments</div>
+              </div>
+              <span class="gallery-card-arrow">See more</span>
+            </div>
+          </a>
+
+          <!-- 4. MoGo Urgent Care Carmel -->
+          <a class="gallery-card" data-category="hospitality">
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/MoGo-Carmel.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="MoGo Urgent Care Carmel"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Carmel, CA — 3,180 SF remodel of an existing commercial
+                  building. Completed in 2020. Contractor: Avila Construction.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Hospitality</div>
+                <div class="gallery-card-name">MoGo Urgent Care — Carmel</div>
+              </div>
+              <span class="gallery-card-arrow"></span>
+            </div>
+          </a>
+
+          <!-- 5. MoGo Urgent Care Monterey -->
+          <a class="gallery-card" data-category="hospitality">
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/MoGomonterey.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="MoGo Urgent Care Monterey"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Monterey, CA — 3,180 SF tenant improvement to an existing
+                  commercial building. Completed in 2020. Contractor: Avila
+                  Construction.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Hospitality</div>
+                <div class="gallery-card-name">MoGo Urgent Care — Monterey</div>
+              </div>
+              <span class="gallery-card-arrow"></span>
+            </div>
+          </a>
+
+          <!-- 6. MoGo Urgent Care Marina -->
+          <a class="gallery-card" data-category="commercial">
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/MoGomarina.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="MoGo Urgent Care Marina"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Marina, CA — 3,200 SF Tenant Improvement to an existing
+                  medical office building. Completed in 2020. Contractor: Avila
+                  Construction.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Commercial</div>
+                <div class="gallery-card-name">MoGo Urgent Care — Marina</div>
+              </div>
+              <span class="gallery-card-arrow"></span>
+            </div>
+          </a>
+
+          <!-- 7. Castro Plaza -->
+          <a
+            href="castro-plaza.html"
+            class="gallery-card"
+            data-category="civic"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/castro2.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="Castro Plaza"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Completed 2007 — 16,000 SF project with a new library, child
+                  and family educational center, historical exhibits, community
+                  meeting facilities, county offices, and a restored plaza with
+                  fountain.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Civic</div>
+                <div class="gallery-card-name">Castro Plaza</div>
+              </div>
+              <span class="gallery-card-arrow">See more</span>
+            </div>
+          </a>
+
+          <!-- 8. Santa Lucia Preserve -->
+          <a
+            href="sainta-lucia-preserve-1.html"
+            class="gallery-card"
+            data-category="custom"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/sl1.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="Santa Lucia Preserve"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  8,400 SF home in Carmel Valley set into a hillside to capture
+                  open space views. Includes main residence, guest house,
+                  caretaker's cottage, and barn.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Custom</div>
+                <div class="gallery-card-name">Santa Lucia Preserve</div>
+              </div>
+              <span class="gallery-card-arrow">See more</span>
+            </div>
+          </a>
+
+          <!-- 9. Oak Park Community -->
+          <a
+            href="oak-park-community-paso-robles.html"
+            class="gallery-card"
+            data-category="multi-family"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/oakpark-1024x685.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="Oak Park Community, Paso Robles"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Completed 2020 — Four-phase affordable multifamily housing
+                  project totaling over 300 units in Paso Robles, replacing 148
+                  units of deteriorated public housing.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">
+                  Multi-Family &amp; Affordable Housing
+                </div>
+                <div class="gallery-card-name">
+                  Oak Park Community — Paso Robles
+                </div>
+              </div>
+              <span class="gallery-card-arrow">See more</span>
+            </div>
+          </a>
+
+          <!-- 10. Sea Side Family Health -->
+          <a class="gallery-card" data-category="hospitality">
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/Seaside-Family-Health-1024x682.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="Sea Side Family Health"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  New 18,572 SF one-story commercial medical/dental/office
+                  building for Monterey County Health Department. Completed
+                  2018.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Hospitality</div>
+                <div class="gallery-card-name">Sea Side Family Health</div>
+              </div>
+              <span class="gallery-card-arrow"></span>
+            </div>
+          </a>
+
+          <!-- 11. Alisal Integrated Health Center -->
+          <a class="gallery-card" data-category="hospitality">
+            <div class="gallery-card-img-wrap">
+              <img
+                src="assets/img/AIHC-1024x576.webp"
+                sizes="(max-width: 600px) 100vw, 33vw"
+                alt="Alisal Integrated Health Center"
+                loading="lazy"
+              />
+              <div class="gallery-card-overlay">
+                <p class="gallery-card-overlay-text">
+                  Salinas, CA — New 19,300 SF clinic for Monterey County.
+                  Construction complete 2024.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-body-inner">
+                <div class="gallery-card-tag">Hospitality</div>
+                <div class="gallery-card-name">
+                  Alisal Integrated Health Center
+                </div>
+              </div>
+              <span class="gallery-card-arrow"></span>
+            </div>
+          </a>
+
+          <!-- No results message -->
+          <div class="no-results" id="noResults">
+            No projects found in this category.
+          </div>
+        </div>
+        <!-- /.gallery-grid -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-grid">
+            <div class="footer-about">
+              <div class="footer-logo">
+                <img
+                  src="assets/img/footer-logo.webp"
+                  alt="The Paul Davis Partnership"
+                />
+              </div>
+              <p>
+                Paul Davis Partnership is a premier architectural firm
+                specializing in sustainable design and innovative building
+                solutions. We create spaces that inspire and endure. Serving
+                Monterey County and beyond since 1984.
+              </p>
+            </div>
+
+            <div class="footer-col">
+              <div class="footer-col-title">Quick Links</div>
+              <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="sustainability.html">Sustainability</a>
+                <a href="design.html">Design</a>
+                <a href="philosophy.html">Philosophy</a>
+                <a href="contact.html">Contact</a>
+              </nav>
+            </div>
+
+            <div class="footer-col">
+              <div class="footer-col-title">Project Types</div>
+              <nav class="footer-links">
+                <a href="projects.html">Historic Restoration</a>
+                <a href="projects.html">Mixed Use</a>
+                <a href="projects.html">Multi-Family &amp; Affordable</a>
+                <a href="projects.html">Civic &amp; Community</a>
+                <a href="projects.html">Commercial</a>
+                <a href="projects.html">Custom Residential</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Paul Davis Partnership. All rights reserved.</p>
+          <p>
+            Developed by
+            <a
+              href="https://ghosxt.com/"
+              target="_blank"
+              style="
+                color: rgba(255, 255, 255, 0.75);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                padding-bottom: 1px;
+              "
+              >Ghosxt</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/projects.js"></script>
+  </body>
+</html>
