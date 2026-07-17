@@ -95,6 +95,8 @@
       </nav>
     </header>
 
+    <main id="main">
+
     <!-- ============================================================
      PAGE HERO
      ============================================================ -->
@@ -201,8 +203,6 @@
             href="holman-ranch-carmel-valley.html"
             class="gallery-card"
             data-category="historic"
-            target="_blank"
-            rel="noopener"
           >
             <div class="gallery-card-img-wrap">
               <img width="509" height="331" srcset="assets/img/holman1-300x195.jpg 300w, assets/img/holman1.jpg 509w"
@@ -233,8 +233,6 @@
             href="286-eldorado-street.html"
             class="gallery-card"
             data-category="mixed-use"
-            target="_blank"
-            rel="noopener"
           >
             <div class="gallery-card-img-wrap">
               <img width="509" height="331" srcset="assets/img/pdpbuilding-300x195.webp 300w, assets/img/pdpbuilding.webp 509w"
@@ -265,8 +263,6 @@
             href="la-gloria-senior-apartments.html"
             class="gallery-card"
             data-category="multi-family"
-            target="_blank"
-            rel="noopener"
           >
             <div class="gallery-card-img-wrap">
               <img width="576" height="287" srcset="assets/img/Chispa-La-Gloria-web-300x149.webp 300w, assets/img/Chispa-La-Gloria-web.webp 576w"
@@ -295,7 +291,7 @@
           </a>
 
           <!-- 4. MoGo Urgent Care Carmel -->
-          <div class="gallery-card" data-category="hospitality">
+          <div class="gallery-card" data-category="commercial">
             <div class="gallery-card-img-wrap">
               <img width="576" height="367" srcset="assets/img/MoGo-Carmel-300x191.webp 300w, assets/img/MoGo-Carmel.webp 576w"
                 src="assets/img/MoGo-Carmel.webp"
@@ -312,7 +308,7 @@
             </div>
             <div class="gallery-card-body">
               <div class="gallery-card-body-inner">
-                <div class="gallery-card-tag">Hospitality</div>
+                <div class="gallery-card-tag">Commercial</div>
                 <div class="gallery-card-name">MoGo Urgent Care — Carmel</div>
               </div>
               <span class="gallery-card-arrow"></span>
@@ -320,7 +316,7 @@
           </div>
 
           <!-- 5. MoGo Urgent Care Monterey -->
-          <div class="gallery-card" data-category="hospitality">
+          <div class="gallery-card" data-category="commercial">
             <div class="gallery-card-img-wrap">
               <img width="473" height="300" srcset="assets/img/MoGomonterey-300x190.webp 300w, assets/img/MoGomonterey.webp 473w"
                 src="assets/img/MoGomonterey.webp"
@@ -338,7 +334,7 @@
             </div>
             <div class="gallery-card-body">
               <div class="gallery-card-body-inner">
-                <div class="gallery-card-tag">Hospitality</div>
+                <div class="gallery-card-tag">Commercial</div>
                 <div class="gallery-card-name">MoGo Urgent Care — Monterey</div>
               </div>
               <span class="gallery-card-arrow"></span>
@@ -376,8 +372,6 @@
             href="castro-plaza.html"
             class="gallery-card"
             data-category="civic"
-            target="_blank"
-            rel="noopener"
           >
             <div class="gallery-card-img-wrap">
               <img width="509" height="331" srcset="assets/img/castro2-300x195.webp 300w, assets/img/castro2.webp 509w"
@@ -409,8 +403,6 @@
             href="santa-lucia-preserve.html"
             class="gallery-card"
             data-category="custom"
-            target="_blank"
-            rel="noopener"
           >
             <div class="gallery-card-img-wrap">
               <img width="509" height="331" srcset="assets/img/sl1-300x195.webp 300w, assets/img/sl1.webp 509w"
@@ -441,8 +433,6 @@
             href="oak-park-community-paso-robles.html"
             class="gallery-card"
             data-category="multi-family"
-            target="_blank"
-            rel="noopener"
           >
             <div class="gallery-card-img-wrap">
               <img width="1024" height="685" srcset="assets/img/oakpark-300x201.webp 300w, assets/img/oakpark-1024x685.webp 1024w"
@@ -537,6 +527,8 @@
     <!-- ============================================================
      FOOTER
      ============================================================ -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-top">
@@ -558,7 +550,7 @@
 
             <div class="footer-col">
               <div class="footer-col-title">Quick Links</div>
-              <nav class="footer-links">
+              <nav class="footer-links" aria-label="Footer quick links">
                 <a href="index.html">Home</a>
                 <a href="projects.html">Projects</a>
                 <a href="sustainability.html">Sustainability</a>
@@ -570,7 +562,7 @@
 
             <div class="footer-col">
               <div class="footer-col-title">Project Types</div>
-              <nav class="footer-links">
+              <nav class="footer-links" aria-label="Footer project types">
                 <a href="projects.html">Historic Restoration</a>
                 <a href="projects.html">Mixed Use</a>
                 <a href="projects.html">Multi-Family &amp; Affordable</a>
@@ -589,11 +581,7 @@
             <a
               href="https://ghosxt.com/"
               target="_blank"
-              style="
-                color: rgba(255, 255, 255, 0.75);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-                padding-bottom: 1px;
-              "
+              class="footer-credit-link"
               >Ghosxt</a
             >
           </p>

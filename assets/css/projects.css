@@ -127,11 +127,6 @@
   display: none;
 }
 
-.gallery-card.fade-out {
-  opacity: 0;
-  transform: scale(0.97);
-}
-
 /* Image wrapper */
 .gallery-card-img-wrap {
   overflow: hidden;
@@ -165,8 +160,8 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(44, 93, 97, 0.92) 0%,
-    rgba(44, 93, 97, 0.4) 60%,
+    rgba(45, 94, 98, 0.92) 0%,
+    rgba(45, 94, 98, 0.4) 60%,
     transparent 100%
   );
   opacity: 0;
