@@ -1,6 +1,6 @@
 /* ============================================================
    Paul Davis Partnership — main.js
-   Mobile menu · Header scroll behavior
+   Mobile menu · Shared reveal helper · Active nav link
    ============================================================ */
 
 (function () {
@@ -41,21 +41,37 @@
   // The CSS handles the animation via .active class on the toggle.
   // The spans transform into an ✕ via CSS (see main.css).
 
-  /* ---------- Sticky header border ---------- */
-  const header = document.querySelector(".site-header");
-  if (header) {
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (window.scrollY > 10) {
-          header.style.borderBottomColor = "var(--pdp-rule)";
-        } else {
-          header.style.borderBottomColor = "var(--pdp-rule)";
+  /* ---------- Shared reveal-on-scroll helper ---------- */
+  // Builds one IntersectionObserver for the given selector(s) and toggles
+  // the `revealed` class as elements enter the viewport. Reveal CSS lives in
+  // main.css (motion wrapped in prefers-reduced-motion: no-preference), so
+  // reduced-motion users simply get the content with no animation.
+  // Page scripts add their .reveal / .reveal-delay-* classes, then call this.
+  window.pdpReveal = function (selectors, options) {
+    const opts = options || { threshold: 0.12, rootMargin: "0px 0px -40px 0px" };
+    const els = document.querySelectorAll(selectors);
+    if (!els.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      els.forEach(function (el) {
+        el.classList.add("revealed");
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
         }
-      },
-      { passive: true },
-    );
-  }
+      });
+    }, opts);
+
+    els.forEach(function (el) {
+      observer.observe(el);
+    });
+  };
 
   /* ---------- Active nav link highlight ---------- */
   const navLinks = document.querySelectorAll(".nav-link");

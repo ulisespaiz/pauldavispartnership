@@ -620,14 +620,20 @@
     grid-template-columns: 1fr;
   }
 
+  .sust-legacy-card {
+    padding: var(--pdp-sp-3xl) var(--pdp-sp-xl);
+  }
+
   .sust-legacy-card:first-child {
     border-right: none;
     padding-right: 0;
+    padding-left: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .sust-legacy-card:last-child {
     padding-left: 0;
+    padding-right: 0;
   }
 
   .sust-tips-grid {
@@ -658,30 +664,12 @@
   .sust-tips-grid {
     grid-template-columns: 1fr;
   }
-
-  @media (max-width: 580px) {
-    .sust-hero-stats {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-    .sust-hero-stat {
-      flex: 1 1 calc(50% - 1px);
-    }
-
-    .sust-legacy-card {
-      padding: var(--pdp-sp-3xl) var(--pdp-sp-xl);
-    }
-
-    .sust-legacy-card:first-child {
-      padding-left: 0;
-    }
-
-    .sust-legacy-card:last-child {
-      padding-right: 0;
-    }
-  }
 }
+/* Former nested "@media (max-width: 580px)" block removed: the
+   .sust-hero-stats/.sust-hero-stat rules it held were already covered
+   verbatim by the 768px breakpoint above, and the .sust-legacy-card
+   padding rules were moved into the 900px breakpoint above (where the
+   legacy grid actually stacks to one column). */
 
 /* ==================== MOBILE HERO IMAGE PAN ==================== */
 /* On mobile only: slowly pan the hero image left → right → left  */

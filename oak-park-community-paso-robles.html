@@ -20,8 +20,56 @@
       rel="stylesheet"
     />
 
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://pauldavispartnership.com/oak-park-community-paso-robles.html" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3c797d" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Paul Davis Partnership" />
+    <meta property="og:title" content="Oak Park Community, Paso Robles — The Paul Davis Partnership" />
+    <meta property="og:description" content="Four-phase affordable multifamily housing community totaling over 300 units in Paso Robles — Paul Davis Partnership." />
+    <meta property="og:url" content="https://pauldavispartnership.com/oak-park-community-paso-robles.html" />
+    <meta property="og:image" content="https://pauldavispartnership.com/assets/img/oakpark-1024x685.webp" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Oak Park Community, Paso Robles — The Paul Davis Partnership" />
+    <meta name="twitter:description" content="Four-phase affordable multifamily housing community totaling over 300 units in Paso Robles — Paul Davis Partnership." />
+    <meta name="twitter:image" content="https://pauldavispartnership.com/assets/img/oakpark-1024x685.webp" />
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/project-single.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pauldavispartnership.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://pauldavispartnership.com/projects.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Oak Park Community, Paso Robles",
+            "item": "https://pauldavispartnership.com/oak-park-community-paso-robles.html"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- ============================================================
@@ -31,7 +79,7 @@
       <div class="header-inner">
         <div class="header-logo">
           <a href="index.html" aria-label="Paul Davis Partnership – Home">
-            <img
+            <img width="382" height="248"
               src="assets/img/pauldavislogo.webp"
               alt="The Paul Davis Partnership"
             />
@@ -69,10 +117,12 @@
       </nav>
     </header>
 
+    <main id="main">
+
     <!-- ============================================================
      BREADCRUMB
      ============================================================ -->
-    <div class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
       <div class="breadcrumb-inner">
         <a href="index.html">Home</a>
         <span class="breadcrumb-sep">/</span>
@@ -80,7 +130,7 @@
         <span class="breadcrumb-sep">/</span>
         <span>Oak Park Community, Paso Robles</span>
       </div>
-    </div>
+    </nav>
 
     <!-- ============================================================
      PROJECT PAGE
@@ -137,21 +187,23 @@
           <div class="project-slider-col">
             <div class="slider-wrap" id="slider">
               <div class="slide active">
-                <img
+                <img width="1024" height="685" fetchpriority="high"
+                  srcset="assets/img/oakpark-300x201.webp 300w, assets/img/oakpark-1024x685.webp 1024w, assets/img/oakpark.webp 1920w"
+                  sizes="(max-width: 900px) 100vw, 50vw"
                   src="assets/img/oakpark-1024x685.webp"
                   alt="Oak Park Community, Paso Robles"
                 />
               </div>
 
               <div class="slide">
-                <img
+                <img width="1920" height="1362" loading="lazy"
                   src="assets/img/Oak-Park-scaled.webp"
                   alt="Oak Park Community, Paso Robles"
                 />
               </div>
 
               <div class="slide">
-                <img
+                <img width="700" height="467" loading="lazy"
                   src="assets/img/oakpark3.webp"
                   alt="Oak Park Community, Paso Robles"
                 />
@@ -203,13 +255,15 @@
     <!-- ============================================================
      FOOTER
      ============================================================ -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-top">
           <div class="footer-grid">
             <div class="footer-about">
               <div class="footer-logo">
-                <img
+                <img width="440" height="360" loading="lazy"
                   src="assets/img/footer-logo.webp"
                   alt="The Paul Davis Partnership"
                 />
@@ -224,7 +278,7 @@
 
             <div class="footer-col">
               <div class="footer-col-title">Quick Links</div>
-              <nav class="footer-links">
+              <nav class="footer-links" aria-label="Footer quick links">
                 <a href="index.html">Home</a>
                 <a href="projects.html">Projects</a>
                 <a href="sustainability.html">Sustainability</a>
@@ -236,7 +290,7 @@
 
             <div class="footer-col">
               <div class="footer-col-title">Project Types</div>
-              <nav class="footer-links">
+              <nav class="footer-links" aria-label="Footer project types">
                 <a href="projects.html">Historic Restoration</a>
                 <a href="projects.html">Mixed Use</a>
                 <a href="projects.html">Multi-Family &amp; Affordable</a>
@@ -255,11 +309,7 @@
             <a
               href="https://ghosxt.com/"
               target="_blank"
-              style="
-                color: rgba(255, 255, 255, 0.75);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-                padding-bottom: 1px;
-              "
+              class="footer-credit-link"
               >Ghosxt</a
             >
           </p>

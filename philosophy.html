@@ -22,6 +22,28 @@
     />
 
     <!-- Stylesheets -->
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://pauldavispartnership.com/philosophy.html" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3c797d" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Paul Davis Partnership" />
+    <meta property="og:title" content="Philosophy — The Paul Davis Partnership" />
+    <meta property="og:description" content="Meet the principals and team of The Paul Davis Partnership — architectural practice rooted in community, sustainability and design excellence since 1984." />
+    <meta property="og:url" content="https://pauldavispartnership.com/philosophy.html" />
+    <meta property="og:image" content="https://pauldavispartnership.com/assets/img/philosophy-hero-image.webp" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Philosophy — The Paul Davis Partnership" />
+    <meta name="twitter:description" content="Meet the principals and team of The Paul Davis Partnership — architectural practice rooted in community, sustainability and design excellence since 1984." />
+    <meta name="twitter:image" content="https://pauldavispartnership.com/assets/img/philosophy-hero-image.webp" />
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/philosophy.css" />
   </head>
@@ -33,7 +55,7 @@
       <div class="header-inner">
         <div class="header-logo">
           <a href="index.html" aria-label="Paul Davis Partnership – Home">
-            <img
+            <img width="382" height="248"
               src="assets/img/pauldavislogo.webp"
               alt="The Paul Davis Partnership"
             />
@@ -73,6 +95,8 @@
       </nav>
     </header>
 
+    <main id="main">
+
     <!-- ============================================================
      PAGE HERO
      ============================================================ -->
@@ -89,13 +113,11 @@
 
       <!-- Hero image slot -->
       <div class="phil-hero-image-wrap">
-        <a href="#">
-          <img
-            src="assets/img/philosophy-hero-image.webp"
-            alt="The Paul Davis Partnership — architecture rooted in community"
-            class="phil-hero-image"
-          />
-        </a>
+        <img width="3067" height="523" fetchpriority="high"
+          src="assets/img/philosophy-hero-image.webp"
+          alt="The Paul Davis Partnership — architecture rooted in community"
+          class="phil-hero-image"
+        />
       </div>
     </section>
 
@@ -115,7 +137,7 @@
           <!-- Paul E. Davis -->
           <div class="phil-principal-card">
             <div class="phil-principal-img-wrap">
-              <img
+              <img width="922" height="1152"
                 src="assets/img/paulsr-photo.png"
                 alt="Paul E. Davis AIA"
                 loading="lazy"
@@ -141,7 +163,7 @@
           <!-- Paul W. Davis -->
           <div class="phil-principal-card">
             <div class="phil-principal-img-wrap">
-              <img
+              <img width="921" height="1152"
                 src="assets/img/pauljr-photo.png"
                 alt="Paul W. Davis AIA"
                 loading="lazy"
@@ -194,7 +216,7 @@
           </blockquote>
           <!-- Image slot -->
           <div class="phil-philosophy-img-wrap">
-            <img
+            <img width="1534" height="1025"
               src="assets/img/philosophy-image.webp"
               alt="Paul Davis Partnership — design philosophy"
               loading="lazy"
@@ -258,7 +280,7 @@
         <div class="phil-team-grid">
           <div class="phil-team-card">
             <div class="phil-team-img-wrap">
-              <img
+              <img width="1024" height="1024"
                 src="assets/img/cecelia-photo.png"
                 alt="Cecelia Morgan"
                 loading="lazy"
@@ -272,7 +294,7 @@
 
           <div class="phil-team-card">
             <div class="phil-team-img-wrap">
-              <img
+              <img width="1024" height="1024"
                 src="assets/img/anilian-photo.png"
                 alt="Anilian Chua"
                 loading="lazy"
@@ -286,7 +308,7 @@
 
           <div class="phil-team-card">
             <div class="phil-team-img-wrap">
-              <img
+              <img width="1024" height="1024"
                 src="assets/img/virgil-photo.png"
                 alt="Virgil Quina"
                 loading="lazy"
@@ -299,9 +321,7 @@
           </div>
 
           <div class="phil-team-card">
-            <div class="phil-team-img-wrap">
-              <img src="" alt="Mario Lopez" loading="lazy" />
-            </div>
+            <div class="phil-team-img-wrap" data-initials="ML"></div>
             <div class="phil-team-body">
               <h3 class="phil-team-name">Mario Lopez</h3>
               <span class="phil-team-role">CADD Draftsman</span>
@@ -343,13 +363,15 @@
     <!-- ============================================================
      FOOTER
      ============================================================ -->
+    </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-top">
           <div class="footer-grid">
             <div class="footer-about">
               <div class="footer-logo">
-                <img
+                <img width="440" height="360" loading="lazy"
                   src="assets/img/footer-logo.webp"
                   alt="The Paul Davis Partnership"
                 />
@@ -364,7 +386,7 @@
 
             <div class="footer-col">
               <div class="footer-col-title">Quick Links</div>
-              <nav class="footer-links">
+              <nav class="footer-links" aria-label="Footer quick links">
                 <a href="index.html">Home</a>
                 <a href="projects.html">Projects</a>
                 <a href="sustainability.html">Sustainability</a>
@@ -376,7 +398,7 @@
 
             <div class="footer-col">
               <div class="footer-col-title">Project Types</div>
-              <nav class="footer-links">
+              <nav class="footer-links" aria-label="Footer project types">
                 <a href="projects.html">Historic Restoration</a>
                 <a href="projects.html">Mixed Use</a>
                 <a href="projects.html">Multi-Family &amp; Affordable</a>
@@ -395,11 +417,7 @@
             <a
               href="https://ghosxt.com/"
               target="_blank"
-              style="
-                color: rgba(255, 255, 255, 0.75);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-                padding-bottom: 1px;
-              "
+              class="footer-credit-link"
               >Ghosxt</a
             >
           </p>

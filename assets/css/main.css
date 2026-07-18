@@ -3,8 +3,7 @@
    Global tokens · Reset · Header · Footer · Utilities
    ============================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap");
+/* Fonts are loaded via <link> tags in each page's <head>. */
 
 /* ==================== CSS VARIABLES ==================== */
 :root {
@@ -110,10 +109,6 @@ ul {
   padding: 0 var(--pdp-side-padding);
 }
 
-.section-padding {
-  padding: var(--pdp-sp-4xl) 0;
-}
-
 .label-eyebrow {
   display: inline-block;
   font-family: var(--pdp-font-body);
@@ -122,6 +117,93 @@ ul {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--pdp-teal);
+}
+
+/* ==================== SCROLL REVEAL ==================== */
+/* Canonical reveal-on-scroll styles (shared by all page scripts, which add
+   these classes then call window.pdpReveal). Motion is wrapped in
+   prefers-reduced-motion: no-preference so reduced-motion users get content
+   with only an opacity change and no movement/transition. */
+.reveal {
+  opacity: 0;
+}
+
+.reveal.revealed {
+  opacity: 1;
+}
+
+.reveal-left {
+  opacity: 0;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+}
+
+.stat-count {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+
+  .reveal.revealed {
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 {
+    transition-delay: 0.1s;
+  }
+  .reveal-delay-2 {
+    transition-delay: 0.2s;
+  }
+  .reveal-delay-3 {
+    transition-delay: 0.3s;
+  }
+  .reveal-delay-4 {
+    transition-delay: 0.4s;
+  }
+  .reveal-delay-5 {
+    transition-delay: 0.5s;
+  }
+
+  .reveal-left {
+    transform: translateX(-18px);
+    transition:
+      opacity 0.65s ease,
+      transform 0.65s ease;
+  }
+
+  .reveal-left.revealed {
+    transform: translateX(0);
+  }
+}
+
+/* ==================== ACCESSIBILITY & MOTION ==================== */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--pdp-teal-dark, #2d5e62);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* ==================== HEADER ==================== */
@@ -196,13 +278,15 @@ ul {
   border-color: var(--pdp-teal-dark);
 }
 
-/* Mobile toggle */
+/* Mobile toggle — 44×44 touch target; visual icon stays 24px wide */
 .mobile-toggle {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -212,15 +296,34 @@ ul {
 .mobile-toggle span {
   display: block;
   height: 1.5px;
-  width: 100%;
+  width: 24px;
   background-color: var(--pdp-black);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Hamburger → X morph (driven by .active, toggled in main.js) */
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* Mobile nav drawer */
 .mobile-nav {
   display: none;
   position: absolute;
-  top: var(--pdp-header-height);
+  /* .site-header is position:relative and wraps both .header-inner and
+     this nav, so 100% anchors to the header's actual rendered height
+     instead of the stale --pdp-header-height token. */
+  top: 100%;
   left: 0;
   right: 0;
   background-color: var(--pdp-white);
@@ -271,9 +374,6 @@ ul {
   grid-template-columns: 2fr 1fr 1fr;
   gap: var(--pdp-sp-3xl);
   align-items: start;
-}
-
-.footer-about {
 }
 
 .footer-logo {
@@ -336,6 +436,12 @@ ul {
 .footer-bottom p {
   font-size: var(--pdp-size-xs);
   color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-credit-link {
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 1px;
 }
 
 /* ==================== RESPONSIVE ==================== */

@@ -6,6 +6,9 @@
   const countEl = document.getElementById("resultCount");
   const noResults = document.getElementById("noResults");
 
+  // Required for the filter UI — bail out cleanly if either is absent.
+  if (!countEl || !noResults) return;
+
   function filterGallery(filter) {
     let visible = 0;
 
