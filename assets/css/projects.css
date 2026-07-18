@@ -188,6 +188,44 @@
   transform: translateY(0);
 }
 
+/* Keyboard users: the card is a full-bleed <a>, so :focus covers the
+   normal case; :focus-within is kept too for resilience if a focusable
+   descendant is ever added. */
+.gallery-card:focus .gallery-card-overlay,
+.gallery-card:focus-within .gallery-card-overlay {
+  opacity: 1;
+}
+
+.gallery-card:focus .gallery-card-overlay-text,
+.gallery-card:focus-within .gallery-card-overlay-text {
+  transform: translateY(0);
+}
+
+/* Touch devices can't :hover, so the description is unreachable —
+   show it permanently as a shortened bottom caption instead of the
+   full-bleed hover treatment. */
+@media (hover: none) {
+  .gallery-card-overlay {
+    top: auto;
+    height: 55%;
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(45, 94, 98, 0.92) 0%,
+      rgba(45, 94, 98, 0.55) 55%,
+      transparent 100%
+    );
+  }
+
+  .gallery-card-overlay-text {
+    transform: translateY(0);
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
 /* Bottom label strip */
 .gallery-card-body {
   padding: 14px var(--pdp-sp-lg);
@@ -296,8 +334,15 @@
   }
 
   .filter-btn {
-    padding: 6px 12px;
-    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    min-height: 44px;
+  }
+
+  .gallery-card-name {
+    white-space: normal;
   }
 
   .page-hero {

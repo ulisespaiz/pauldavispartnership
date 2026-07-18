@@ -278,13 +278,15 @@ button:focus-visible,
   border-color: var(--pdp-teal-dark);
 }
 
-/* Mobile toggle */
+/* Mobile toggle — 44×44 touch target; visual icon stays 24px wide */
 .mobile-toggle {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -294,15 +296,34 @@ button:focus-visible,
 .mobile-toggle span {
   display: block;
   height: 1.5px;
-  width: 100%;
+  width: 24px;
   background-color: var(--pdp-black);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Hamburger → X morph (driven by .active, toggled in main.js) */
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* Mobile nav drawer */
 .mobile-nav {
   display: none;
   position: absolute;
-  top: var(--pdp-header-height);
+  /* .site-header is position:relative and wraps both .header-inner and
+     this nav, so 100% anchors to the header's actual rendered height
+     instead of the stale --pdp-header-height token. */
+  top: 100%;
   left: 0;
   right: 0;
   background-color: var(--pdp-white);

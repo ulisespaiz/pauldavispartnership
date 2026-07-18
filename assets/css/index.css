@@ -717,7 +717,7 @@
   top: -40px;
   right: calc(var(--pdp-side-padding) + 20px);
   font-family: var(--pdp-font-display);
-  font-size: 340px;
+  font-size: clamp(160px, 30vw, 340px);
   line-height: 1;
   color: rgba(60, 121, 125, 0.055);
   pointer-events: none;

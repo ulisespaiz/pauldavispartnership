@@ -188,8 +188,8 @@
   background: var(--pdp-teal);
   border: none;
   color: var(--pdp-white);
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,20 +223,34 @@
   margin-top: var(--pdp-sp-md);
 }
 
+/* Hit area is 44×44 (a11y touch target); the visible dot stays 8px via
+   a centered ::before so the dense dot row doesn't grow visually. */
 .slider-dot {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-dot::before {
+  content: "";
+  display: block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: var(--pdp-teal-muted);
-  border: none;
-  cursor: pointer;
-  padding: 0;
   transition:
     background 0.2s,
     transform 0.2s;
 }
 
-.slider-dot.active {
+.slider-dot.active::before {
   background-color: var(--pdp-teal);
   transform: scale(1.25);
 }
@@ -264,5 +278,14 @@
 
   .project-title {
     font-size: clamp(26px, 7vw, 40px);
+  }
+}
+
+@media (max-width: 580px) {
+  /* Longest label ("Contractor") still fits well under 90px; freeing the
+     rest of the row gives long values (addresses, contractor names) more
+     room before wrapping awkwardly. */
+  .project-meta-label {
+    min-width: 90px;
   }
 }

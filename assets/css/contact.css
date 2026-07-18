@@ -490,6 +490,7 @@ a.cont-info-value:hover {
 
 /* Map iframe — fixed height, no scroll */
 .cont-map-wrap {
+  position: relative;
   overflow: hidden;
   height: 480px;
   border: 1px solid var(--pdp-teal-muted);
@@ -502,11 +503,43 @@ a.cont-info-value:hover {
   border: 0;
   filter: grayscale(15%) contrast(1.05);
   transition: filter 0.4s;
-  pointer-events: auto;
+  /* Disabled until the tap-to-activate scrim is dismissed (contact.js) —
+     prevents the embedded map from trapping touch-scroll gestures. */
+  pointer-events: none;
 }
 
 .cont-map-wrap:hover iframe {
   filter: grayscale(0%) contrast(1);
+}
+
+/* Tap-to-activate scrim */
+.cont-map-wrap::after {
+  content: "Tap to interact with map";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--pdp-sp-lg);
+  font-size: var(--pdp-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pdp-white);
+  background-color: rgba(45, 94, 98, 0.4);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.cont-map-wrap.map-active::after {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cont-map-wrap.map-active iframe {
+  pointer-events: auto;
 }
 
 /* ==================== RESPONSIVE ==================== */
