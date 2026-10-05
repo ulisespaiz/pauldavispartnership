@@ -85,3 +85,32 @@
   .project-body ul { padding-left: 24px; }
   .project-body li { margin-bottom: 6px; }
 }
+
+/* Added project detail: facts, background paragraph, sources (white on teal, understated) */
+.project-extra { margin-top: 8px; }
+.project-h {
+  font-family: var(--font-head); font-size: 12px; font-weight: 600; line-height: 1.4;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--white);
+  margin: 28px 0 10px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+.project-extra p { margin: 0 0 14.4px; font-size: 16px; line-height: 24px; }
+.project-facts { margin: 0; padding: 0; }
+.project-facts > div {
+  display: grid; grid-template-columns: 9.5em 1fr; gap: 0 16px;
+  padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.project-facts > div:last-child { border-bottom: 0; }
+.project-facts dt {
+  font-family: var(--font-head); font-size: 12px; font-weight: 500; line-height: 24px;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--white);
+}
+.project-facts dd { margin: 0; font-size: 15px; line-height: 24px; overflow-wrap: anywhere; }
+.project-sources { list-style: none; margin: 0; padding: 0; }
+.project-sources li { margin: 0 0 8px; font-size: 14px; line-height: 21px; }
+.project-sources a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.project-sources a:hover { text-decoration-thickness: 2px; }
+.project-sources a:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+@media (max-width: 480px) {
+  .project-facts > div { grid-template-columns: 1fr; padding: 9px 0; }
+  .project-facts dt { line-height: 18px; margin-bottom: 2px; }
+}
