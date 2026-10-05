@@ -1,0 +1,56 @@
+/* Project detail pages: text column + image (or carousel) column on teal. */
+
+.project { padding: 40px 0; }
+.project-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; align-items: start;
+}
+.project-text, .project-media { margin: 10px; min-width: 0; }
+.project-text { color: var(--white); font-family: Roboto, var(--font-sys); }
+
+.project-title {
+  font-family: var(--font-head); font-size: 22px; font-weight: 600; line-height: 22px;
+  color: var(--white); margin-bottom: 20px;
+}
+.project-sub {
+  font-family: var(--font-head); font-size: 14px; font-weight: 500; line-height: 20px;
+  color: var(--white); margin: 0 0 20px;
+}
+.project-title.reveal { transition-delay: 0.3s; }
+.project-sub.reveal { transition-delay: 0.5s; }
+
+.project-body { font-size: 16px; line-height: 24px; }
+.project-body p { margin: 0 0 14.4px; }
+.project-body ul { padding-left: 40px; }
+
+/* Media: image centred at natural size (max 100% of the column); 37px below it for the dots. */
+.project-media { padding-bottom: 37px; }
+.project-media img { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; }
+
+/* Carousel overrides of the shared styles in site.css */
+.project-media .carousel-track { align-items: flex-start; }
+.project-media .carousel-slide img { width: auto; height: auto; object-fit: initial; }
+.project-media .carousel-arrow {
+  top: calc(50% - 15px); width: 25px; height: 25px; padding: 0; border-radius: 0;
+  background: none; font-size: 0; color: transparent;
+}
+.project-media .carousel-arrow::before {
+  content: ""; width: 25px; height: 25px; opacity: 0.9;
+  background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cpath fill='%23ededed' d='M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z'/%3E%3C/svg%3E");
+}
+.project-media .carousel-next::before { transform: scaleX(-1); }
+.project-media .carousel-arrow:focus-visible,
+.project-media .carousel-dots button:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.project-media .carousel-dots { bottom: 12px; gap: 12px; }
+.project-media .carousel-dots button {
+  position: relative; width: 6px; height: 6px; background: rgba(0, 0, 0, 0.2);
+}
+.project-media .carousel-dots button::after { content: ""; position: absolute; inset: -8px -6px; }
+.project-media .carousel-dots button[aria-current="true"] { background: #000; }
+
+@media (max-width: 1024px) {
+  .project-title { font-size: 20px; line-height: 20px; }
+}
+@media (max-width: 767px) {
+  .project-inner { grid-template-columns: 1fr; }
+}

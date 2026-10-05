@@ -1,0 +1,92 @@
+/* Sustainability page */
+main { background: var(--teal); }
+
+/* Hero */
+.sus-hero { background: var(--teal); padding: 10px 30px 90px; text-align: center; }
+.sus-hero h1 { font: 700 50px/1 var(--font-head); color: #fff; text-transform: uppercase; margin: 0; }
+.sus-dots { width: 129px; height: 0; margin: 30px auto 10px; border-top: 5px dotted #fff; box-sizing: content-box; }
+
+/* Intro + project sections */
+.sus-intro { background: #f1f7f7; padding: 50px 0; }
+.sus-wrap { max-width: 1250px; margin: 0 auto; padding: min(62.5px, 5vw); padding-bottom: calc(min(62.5px, 5vw) + 10px); font-family: var(--font-head); color: #0c0c0c; }
+.sus-row { display: grid; align-items: start; }
+.sus-row-a { grid-template-columns: 55fr 45fr; }
+.sus-row-b { grid-template-columns: 1fr 1fr; }
+.sus-col { padding: 10px; min-width: 0; }
+.sus-h2 { font: 600 30px/1 var(--font-head); color: #0c0c0c; margin: 0; }
+.sus-rule { width: 145px; height: 1px; background: var(--teal); margin: 28px 0; }
+.sus-text { font: 400 16px/1.6 var(--font-head); color: #0c0c0c; }
+.sus-text p { margin: 0 0 14.4px; }
+.sus-img { width: 100%; height: 700px; object-fit: cover; }
+
+@media (max-width: 767px) {
+  .sus-hero { padding: 57px 30px 98px; }
+  .sus-hero h1 { font-size: 25px; }
+  .sus-dots { width: 130px; margin: 22px auto 2px; }
+  .sus-intro { padding: 5px; }
+  .sus-wrap { padding: 10px 10px 20px; }
+  .sus-row-a, .sus-row-b { grid-template-columns: 1fr; }
+  .sus-row-b .sus-col-text { order: -1; }
+  .sus-h2 { font-size: 25px; }
+  .sus-rule { width: 170px; }
+  .sus-text { font-size: 15px; line-height: 20px; }
+  .sus-img { height: 280px; }
+}
+
+/* Go Green guide (system font, like the original custom-HTML block) */
+.gg-section { background: #f1f7f7; padding: 0; }
+.gg-wrap { max-width: 1140px; margin: 0 auto; padding: 10px; font-family: var(--font-sys); color: #333; line-height: 1.5; }
+.gg-title { font-size: 2.5rem; font-weight: 700; color: #2d8c62; margin: 8px 0 35px; text-align: center; line-height: 1.2; }
+.gg-title::after { content: ""; display: block; width: 180px; height: 4px; background: #2d8c62; margin: 15px auto 0; border-radius: 2px; }
+.gg-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+.gg-card { --c: #54a0ff; --cbg: rgba(84, 160, 255, .1); border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 3px 10px rgba(0, 0, 0, .05); }
+.gg-energy { --c: #ff9f43; --cbg: rgba(255, 159, 67, .1); }
+.gg-materials { --c: #26de81; --cbg: rgba(38, 222, 129, .1); }
+.gg-toxins { --c: #a55eea; --cbg: rgba(165, 94, 234, .1); }
+.gg-card-head { padding: 15px 20px; display: flex; align-items: center; border-bottom: 1px solid #f0f0f0; background: #f9f9f9; }
+.gg-card-title { font-size: 1.5rem; font-weight: 600; margin: 0; display: flex; align-items: center; gap: 15px; color: #333; }
+.gg-icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--cbg); color: var(--c); }
+.gg-list { list-style: none; padding: 15px; margin: 0; }
+.gg-item { margin-bottom: 15px; padding: 15px; border-radius: 8px; background: #f9f9f9; border-left: 4px solid var(--c); transition: transform .2s ease, box-shadow .2s ease; }
+.gg-item:last-child { margin-bottom: 0; }
+.gg-item:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 0, 0, .08); }
+.gg-action { display: block; font-weight: 600; font-size: 1.05rem; margin-bottom: 10px; line-height: 1.5; }
+.gg-note { display: block; color: #666; margin: 10px 0; line-height: 1.5; font-size: .95rem; }
+.gg-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tag { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: .8rem; font-weight: 500; white-space: nowrap; line-height: 1.5; }
+.t-super { background: #e6fcef; color: #00b368; }
+.t-low { background: #e7f6ff; color: #3498db; }
+.t-mod { background: #fff8e6; color: #f5b041; }
+.t-no { background: #f2f2f2; color: #555; }
+.t-instant { background: #fff0e6; color: #ff9f43; }
+.t-quick { background: #e7f6ff; color: #54a0ff; }
+.t-annual { background: #e6fff0; color: #2ed573; }
+.t-monthly { background: #f0e6ff; color: #9c88ff; }
+.t-env { background: #e6f7ff; color: #1890ff; }
+.t-health { background: #ffe6eb; color: #ff4d6d; }
+
+.gg-resources { margin-top: 30px; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 3px 10px rgba(0, 0, 0, .05); }
+.gg-res-title { font-size: 1.5rem; font-weight: 600; color: #2d8c62; margin: 8px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #e0f2ea; }
+.gg-res-list { list-style: none; padding: 0; margin: 0; }
+.gg-res-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f0f0f0; }
+.gg-res-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.gg-res-name { display: block; font-weight: 600; margin-bottom: 5px; }
+.gg-res-desc { color: #666; font-size: .9rem; }
+.gg-res-link { color: #2d8c62; text-decoration: none; font-weight: 500; }
+.gg-res-link:hover { text-decoration: underline; }
+.gg-res-link:focus-visible { outline: 2px solid #2d8c62; outline-offset: 2px; border-radius: 2px; }
+
+@media (min-width: 768px) {
+  .gg-grid { grid-template-columns: repeat(2, 1fr); }
+  .gg-list { padding: 20px; }
+}
+@media (max-width: 767px) {
+  .gg-section { padding: 20px 5px; }
+  .gg-wrap { max-width: 767px; }
+  .gg-title { font-size: 2rem; }
+  .gg-card-title { font-size: 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gg-item { transition: none; }
+  .gg-item:hover { transform: none; }
+}
