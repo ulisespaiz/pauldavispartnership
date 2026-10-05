@@ -27,6 +27,25 @@
     });
   }
 
+  // ---- Header: compact + shadow once the page is scrolled ----
+  var header = document.querySelector(".pdp-header");
+  if (header) {
+    var ticking = false;
+    var onScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        header.classList.toggle("is-scrolled", window.scrollY > 40);
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ---- Footer year ----
+  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
   // ---- Reveal on scroll ----
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {
