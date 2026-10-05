@@ -52,7 +52,7 @@ button { font: inherit; }
 }
 
 /* ---------- Header ---------- */
-.pdp-header { background: var(--teal); padding: 10px 0; } /* original sits in a 10px Elementor wrapper */
+.pdp-header { background: var(--teal); padding: 10px 0; }
 .pdp-header-container {
   max-width: var(--wrap); margin: 0 auto; padding: 1rem 2rem;
   display: flex; justify-content: space-between; align-items: center;
