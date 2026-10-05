@@ -45,7 +45,7 @@
   display: flex; align-items: center; visibility: hidden; opacity: 0;
   transition: opacity 0.5s ease, visibility 0.5s;
 }
-.pg-caption::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(0, 0, 0, 0.82); }
+.pg-caption::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(0, 0, 0, 0.574); }
 .pg-item:hover .pg-caption, .pg-item:focus-within .pg-caption { visibility: visible; opacity: 1; }
 .pg-over { width: 100%; text-align: left; }
 .pg-title { font-family: var(--font-head); font-size: 17px; font-weight: 500; line-height: 1.2; color: var(--white); margin: 8px 0 16px; }

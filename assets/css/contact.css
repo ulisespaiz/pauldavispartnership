@@ -1,0 +1,50 @@
+/* Contact page */
+.ct-hero-in { max-width: 1350px; margin: 0 auto; display: flex; align-items: center; }
+.ct-hero-col { width: 100%; padding: 10px 30px 90px; }
+.ct-hero h1 {
+  font-family: var(--font-head); font-size: 50px; font-weight: 700; line-height: 1;
+  text-transform: uppercase; text-align: center; color: var(--white); margin-bottom: 30px;
+}
+.ct-dots { width: 10%; margin: 0 auto 10px; border-top: 5px dotted var(--white); }
+
+.ct-map { padding: 10px; }
+.ct-map iframe { display: block; width: 100%; height: 336px; border: 0; }
+
+.ct-team { max-width: 1140px; margin: 0 auto; padding: 30px 10px; }
+.ct-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); row-gap: 10px; }
+.ct-card {
+  grid-column: span 2; margin: 10px; padding: 10px; background: #f4f4f4;
+  box-shadow: 0 0 3px rgba(200, 200, 200, 0.5); font-family: var(--font-head);
+}
+.ct-lg, .ct-sm { grid-column: span 3; }
+.ct-photo { margin-bottom: 5px; object-fit: cover; transition: transform 0.3s ease-out; }
+.ct-photo:hover { transform: translateY(-8px); }
+.ct-lg .ct-photo { width: 37%; height: 243px; border-radius: 2%; }
+.ct-md .ct-photo { width: 50%; height: 160px; border-radius: 100%; }
+.ct-name { font-size: 17px; font-weight: 600; line-height: 1; color: #000; margin: 0 0 5px; }
+.ct-role { font-size: 14px; font-weight: 500; line-height: 20px; color: var(--teal-dark); margin: 0 0 5px; }
+.ct-list { list-style: none; margin: 0; padding: 0; font-size: 14px; font-weight: 500; line-height: 21px; color: var(--ink); }
+.ct-list li { display: flex; align-items: center; padding-bottom: 2px; }
+.ct-list a { display: flex; align-items: center; color: inherit; text-decoration: none; }
+.ct-list a:hover span, .ct-list a:focus-visible span { text-decoration: underline; }
+.ct-list svg { flex: none; width: 14px; height: 14px; margin-right: 3.5px; fill: var(--teal); }
+.ct-list span { padding-left: 5px; }
+
+@media (max-width: 1024px) {
+  .ct-hero h1 { font-size: 30px; }
+  .ct-team { padding: 30px 10px; }
+  .ct-grid { grid-template-columns: repeat(2, 1fr); }
+  .ct-card, .ct-lg, .ct-sm { grid-column: auto; }
+  .ct-lg .ct-photo { width: 45%; height: 200px; }
+  .ct-name { font-size: 20px; }
+  .ct-sm .ct-name { font-size: 18px; }
+}
+@media (max-width: 767px) {
+  .ct-hero { padding: 20px 20px 0; }
+  .ct-hero-in { min-height: 180px; }
+  .ct-hero h1 { font-size: 25px; margin-bottom: 22px; }
+  .ct-dots { width: 45%; margin-bottom: 2px; }
+  .ct-team { padding: 30px 20px; }
+  .ct-grid { grid-template-columns: 1fr; }
+  .ct-lg .ct-photo { width: 100%; height: 290px; }
+}
