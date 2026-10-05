@@ -1,0 +1,11 @@
+# Files Cloudflare should NOT publish from the repo root
+.git
+.github
+.gitignore
+.assetsignore
+.wrangler
+node_modules
+new
+wrangler.jsonc
+README.md
+*.md
