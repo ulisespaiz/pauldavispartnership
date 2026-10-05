@@ -50,6 +50,7 @@
 
 @media (max-width: 1024px) {
   .project-title { font-size: 20px; line-height: 1.25; }
+  .project-inner { padding: 0 6px; }
   /* Comfortable touch targets for the carousel controls */
   .project-media .carousel-arrow {
     top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%;

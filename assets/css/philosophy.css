@@ -83,6 +83,7 @@
   .p-phil .p-rule { width: 40%; }
   .p-phil-body { font-size: 16px; line-height: 1.6; }
   .p-tag { font-size: 16px; }
+  .p-phil-head { padding-bottom: 16px; }
 
   .p-team-row { grid-template-columns: 1fr; }
   .p-team-row h3 { font-size: 20px; }
