@@ -66,10 +66,10 @@
   }
   .project-media .carousel-dots button::after {
     content: ""; position: static; inset: auto; width: 8px; height: 8px; border-radius: 50%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.4);
   }
   .project-media .carousel-dots button[aria-current="true"] { background: none; }
-  .project-media .carousel-dots button[aria-current="true"]::after { background: #000; }
+  .project-media .carousel-dots button[aria-current="true"]::after { background: #fff; }
 }
 @media (max-width: 767px) {
   /* Single column: title, subtitle, photo, then the long text (the photo is the point). */
