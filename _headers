@@ -1,4 +1,13 @@
-/assets/*
+/assets/css/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/assets/js/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/assets/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
 /*

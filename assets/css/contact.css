@@ -58,3 +58,11 @@
   .ct-list a { min-height: 44px; }
   .ct-list span { min-width: 0; overflow-wrap: anywhere; }
 }
+
+/* Portraits: natural framing, no tight crop */
+.ct-lg .ct-photo { width: 180px; height: auto; aspect-ratio: 480 / 552; object-fit: cover; object-position: top; border-radius: 4px; }
+.ct-md .ct-photo { width: 120px; height: 120px; }
+@media (max-width: 767px) {
+  .ct-lg .ct-photo { width: min(220px, 70%); height: auto; display: block; margin: 0 auto 10px; }
+  .ct-md .ct-photo { width: 110px; height: 110px; display: block; margin: 0 auto 10px; }
+}
