@@ -1,0 +1,90 @@
+/* Philosophy page */
+.p-hero { background: var(--teal); }
+.p-hero-in { max-width: 1350px; margin: 0 auto; padding: 10px 30px 90px; text-align: center; }
+.p-hero h1 { font: 700 4em/1 var(--font-head); text-transform: uppercase; color: var(--white); margin: 0 0 20px; }
+.dots { padding: 10px 0; }
+.dots span { display: block; width: 10%; margin: 0 auto; border-top: 5px dotted var(--white); }
+
+.p-wrap { max-width: 1140px; margin: 0 auto; }
+.p-rule { height: 0; margin: 0; border: 0; }
+
+/* Principals */
+.p-leaders { background: #f8f9fa; padding-top: 40px; }
+.p-leaders-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.p-leader { padding: 10px; }
+.p-row { display: flex; align-items: center; }
+.p-ph { flex: 0 0 50%; padding: 10px; }
+.p-ph img { width: 100%; opacity: 0.8; border-radius: 5px; }
+.p-nm { flex: 0 0 50%; padding: 10px; }
+.p-nm h2 { font: 600 24px/1.3 var(--font-head); color: var(--ink); margin: 0; }
+.p-nm .p-rule { width: 25%; margin: 24px 0; border-top: 2px solid var(--teal); }
+.p-title { margin: 0; font: 500 15px/20px var(--font-head); color: var(--teal); }
+
+/* Statement */
+.p-phil-in { padding: 10px; }
+.p-phil-head { padding: 10px; }
+.p-phil h2 { font: 600 24px/1.3 var(--font-head); color: var(--white); margin: 0; }
+.p-phil .p-rule { width: 10%; margin: 8px 0; border-top: 2px solid var(--white); }
+.p-tag { margin: 0; font: 500 15px/20px var(--font-head); color: var(--white); }
+.p-phil-body { font: 400 17px/20px var(--font-head); color: var(--white); }
+.p-phil-body p { margin: 0 0 14.4px; }
+
+/* Team */
+.p-team { background: #f8f9fa; padding-top: 40px; }
+.p-team-in { padding: 10px; }
+.p-team-row { display: grid; grid-template-columns: 1fr 1fr; padding: 10px 0; }
+.p-card {
+  margin: 10px; padding: 30px; background: #fffefe;
+  box-shadow: 3px 2px 1px 1px rgba(198, 198, 198, 0.5);
+}
+.p-row2 .p-card { margin: 7px 5px; }
+.p-ib { padding-bottom: 20px; text-align: center; font-family: var(--font-head); }
+.p-ib-flex { display: flex; align-items: center; text-align: left; }
+.p-ib figure { width: 43%; margin: 0 30px 0 0; }
+.p-ib img { border-radius: 100%; max-width: 100%; transition-duration: 0.3s; }
+.p-ib-txt { width: 100%; }
+.p-ib h3 { margin: 8px 0 2px; font: 600 20px/1.2 var(--font-head); color: var(--ink); }
+.p-ib p { margin: 0; font: 400 15px/1.7 var(--font-head); color: var(--teal-dark); }
+.p-ib-flex h3 { margin-top: 8px; }
+.p-row2 .p-ib figure { width: 40%; }
+.p-row2 h3 { margin-bottom: 3px; font-size: 17px; }
+.p-row2 .p-ib p { font-size: 14px; }
+
+@media (max-width: 1024px) {
+  .p-hero h1 { font-size: 3em; }
+  .p-nm h2 { font-size: 15px; letter-spacing: 1px; }
+  .p-title { font-size: 12px; }
+  .p-phil { padding: 20px 10px; }
+  .p-phil h2 { font-size: 25px; letter-spacing: 1px; }
+  .p-team-row h3 { font-size: 19px; }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .p-ph { flex-basis: 45%; }
+  .p-nm { flex: 1; }
+}
+@media (max-width: 767px) {
+  .p-hero { padding: 20px 20px 0; }
+  .p-hero-in { min-height: 20vh; display: flex; flex-direction: column; justify-content: flex-end; }
+  .p-hero h1 { font-size: 2em; }
+  .dots { padding: 2px 0; }
+  .dots span { width: 45%; }
+
+  .p-leaders { padding-top: 20px; }
+  .p-leaders-grid { display: block; }
+  .p-leader { padding: 10px 0; }
+  .p-row { display: block; }
+  .p-nm h2 { font-size: 20px; }
+  .p-phil h2 { font-size: 35px; }
+  .p-phil .p-rule { width: 40%; }
+  .p-phil-body { font-size: 15px; }
+
+  .p-team-row { grid-template-columns: 1fr; }
+  .p-team-row h3 { font-size: 20px; }
+  .p-ib-flex { display: block; text-align: center; }
+  .p-ib figure { width: 55%; margin: 0 auto 15px; }
+  .p-ib-flex h3 { margin-top: 0; }
+  .p-ib img { max-width: 100%; }
+  .p-ib-txt { width: auto; }
+  .p-row2 .p-ib figure { width: 55%; }
+  .p-row2 .p-card { margin: 7px 5px; }
+}
