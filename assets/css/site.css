@@ -68,7 +68,6 @@ button { font: inherit; }
   transition: background-color 0.3s ease;
 }
 .pdp-header-nav a:hover, .pdp-header-nav a:focus-visible { background-color: rgba(255, 255, 255, 0.1); }
-.pdp-header-nav a[aria-current="page"] { background-color: rgba(255, 255, 255, 0.1); }
 
 .pdp-mobile-toggle { display: none; padding: 0.5rem; background: transparent; border: 0; cursor: pointer; }
 .pdp-mobile-toggle svg { width: 32px; height: 32px; stroke: var(--white); display: block; }
