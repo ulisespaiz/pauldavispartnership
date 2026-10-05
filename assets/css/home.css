@@ -93,14 +93,36 @@
 .proj-desc { font-size: 15px; line-height: 24px; }
 .proj-desc p { margin: 0 0 5px; }
 .proj-desc ul { margin: 0; padding: 0; }
-.proj-more { text-align: center; margin-top: 10px; }
+.proj-more { text-align: center; margin-top: 24px; }
 .proj-more a {
-  display: inline-block; padding: 10px 5px 3px 4px; font-size: 15px; line-height: 15px; font-weight: 500;
-  color: var(--teal-dark); text-decoration: none; border-bottom: 1px solid var(--teal-dark);
-  transition: transform 0.3s;
+  display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 34px;
+  font-size: 15px; line-height: 1; font-weight: 500; letter-spacing: 0.5px;
+  color: var(--teal-dark); text-decoration: none; border: 2px solid var(--teal); border-radius: 3px;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
-.proj-more a:hover { transform: scale(1.1); }
+.proj-more a:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
 .proj-more a:focus-visible { outline: 2px solid var(--teal-dark); outline-offset: 3px; }
+
+/* subtle image zoom on hover-capable pointers */
+.proj-item img { transition: transform 0.6s ease; }
+@media (hover: hover) { .proj-item:hover img { transform: scale(1.03); } }
+
+/* ---------- Touch + small screens: always-visible compact caption bar ---------- */
+@media (hover: none), (max-width: 767px) {
+  .proj-cap {
+    inset: auto 0 0 0; padding: 36px 14px 12px; align-items: flex-end;
+    opacity: 1; background: linear-gradient(to top, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0));
+  }
+  .proj-cap::before { display: none; }
+  .proj-cap-in { transform: none; }
+  .proj-name { margin: 0; font-size: 17px; line-height: 1.25; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+  .proj-name a::after { inset: -400px -14px -400px -14px; }
+  /* full descriptions stay available to screen readers and on the project pages */
+  .proj-desc {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .proj-item:hover img { transform: none; }
+}
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1024px) {
@@ -122,23 +144,34 @@
   .hero-title { font-size: 20px; line-height: 25px; margin-bottom: 11px; }
   .hero-text { font-size: 16px; line-height: 1.6; }
 
+  .mv { padding-bottom: 0; }
   .mv-grid { grid-template-columns: 1fr; }
-  .mv-card { margin: 0; }
-  .mv-icon { padding: 11px; }
+  .mv-card { margin: 0; padding: 10px 20px 28px; border-radius: 0; box-shadow: none; border-bottom: 1px solid #e6e6e6; }
+  .mv-card.is-visible:hover { box-shadow: none; transform: none; }
+  .mv-icon { margin-top: 12px; padding: 11px; }
   .mv-icon svg { width: 22px; height: 22px; }
   .mv-title { font-size: 24px; }
+  .mv-card p { font-size: 16px; }
 
-  .about { padding: 136px 0 110px; }
-  .about-container { width: calc(100% - 60px); padding: 20px; }
+  .about { padding: 40px 0 48px; }
+  .about-container { width: calc(100% - 32px); padding: 20px 16px; }
+  .about-head { margin: 0 0 20px; }
+  .about-content { padding: 16px; margin-bottom: 20px; }
+  .expertise { margin-top: 20px; }
+  .expertise-card li { font-size: 16px; line-height: 1.5; }
   .about-title { font-size: 36px; }
   .about-sub { font-size: 18px; }
   .about-content p { font-size: 16px; }
   .expertise { grid-template-columns: 1fr; gap: 15px; }
 
   .proj-title { font-size: 25px; }
+  .proj { padding: 36px 0 40px; }
+  .proj-gallery { margin: 0; }
   .proj-grid { grid-template-columns: 1fr; }
-  .proj-item { height: 412px; padding: 1px; }
-  .proj-cap { inset: 0; }
-  .proj-name { font-size: 20px; line-height: 1.2; }
-  .proj-desc { font-size: 14px; line-height: 22.4px; }
+  .proj-item { height: auto; aspect-ratio: 4 / 3; padding: 1px; }
+  .proj-name { font-size: 18px; }
+}
+@media (min-width: 560px) and (max-width: 767px) {
+  .proj-grid { grid-template-columns: 1fr 1fr; }
+  .proj-name { font-size: 16px; }
 }

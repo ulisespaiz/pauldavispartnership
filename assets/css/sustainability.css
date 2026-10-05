@@ -20,17 +20,18 @@ main { background: var(--teal); }
 .sus-img { width: 100%; height: 700px; object-fit: cover; }
 
 @media (max-width: 767px) {
-  .sus-hero { padding: 57px 30px 98px; }
+  .sus-hero { padding: 28px 20px 40px; }
   .sus-hero h1 { font-size: 25px; }
-  .sus-dots { width: 130px; margin: 22px auto 2px; }
-  .sus-intro { padding: 5px; }
-  .sus-wrap { padding: 10px 10px 20px; }
+  .sus-dots { width: 130px; margin: 18px auto 0; }
+  .sus-intro { padding: 0; }
+  .sus-wrap { padding: 16px 12px 24px; }
   .sus-row-a, .sus-row-b { grid-template-columns: 1fr; }
   .sus-row-b .sus-col-text { order: -1; }
   .sus-h2 { font-size: 25px; }
   .sus-rule { width: 170px; }
-  .sus-text { font-size: 15px; line-height: 20px; }
-  .sus-img { height: 280px; }
+  .sus-text { font-size: 16px; line-height: 1.6; }
+  .sus-rule { margin: 20px 0; }
+  .sus-img { height: 240px; }
 }
 
 /* Go Green guide (system font, like the original custom-HTML block) */
@@ -85,6 +86,14 @@ main { background: var(--teal); }
   .gg-wrap { max-width: 767px; }
   .gg-title { font-size: 2rem; }
   .gg-card-title { font-size: 1.3rem; }
+  .gg-section { padding: 20px 8px 28px; }
+  .gg-item { padding: 14px; }
+  .gg-note { font-size: 1rem; line-height: 1.6; }
+  .gg-action { font-size: 1.05rem; }
+  .gg-res-desc { display: block; font-size: 1rem; line-height: 1.5; margin-bottom: 2px; }
+  .gg-res-link { display: inline-flex; align-items: center; min-height: 44px; }
+  .gg-res-item { margin-bottom: 8px; padding-bottom: 8px; }
+  .tag { font-size: .8125rem; padding: 4px 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .gg-item { transition: none; }

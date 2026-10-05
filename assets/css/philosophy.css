@@ -64,8 +64,8 @@
 }
 @media (max-width: 767px) {
   .p-hero { padding: 20px 20px 0; }
-  .p-hero-in { min-height: 20vh; display: flex; flex-direction: column; justify-content: flex-end; }
-  .p-hero h1 { font-size: 2em; }
+  .p-hero-in { padding: 10px 0 28px; }
+  .p-hero h1 { font-size: 2em; margin-bottom: 14px; }
   .dots { padding: 2px 0; }
   .dots span { width: 45%; }
 
@@ -73,10 +73,16 @@
   .p-leaders-grid { display: block; }
   .p-leader { padding: 10px 0; }
   .p-row { display: block; }
+  .p-ph { max-width: 340px; margin: 0 auto; padding: 10px 10px 4px; }
+  .p-ph img { width: 100%; max-height: 360px; object-fit: cover; object-position: top; }
+  .p-nm { padding: 6px 10px 10px; text-align: center; }
+  .p-nm .p-rule { margin: 14px auto; }
+  .p-title { font-size: 14px; line-height: 1.5; }
   .p-nm h2 { font-size: 20px; }
   .p-phil h2 { font-size: 35px; }
   .p-phil .p-rule { width: 40%; }
-  .p-phil-body { font-size: 15px; }
+  .p-phil-body { font-size: 16px; line-height: 1.6; }
+  .p-tag { font-size: 16px; }
 
   .p-team-row { grid-template-columns: 1fr; }
   .p-team-row h3 { font-size: 20px; }

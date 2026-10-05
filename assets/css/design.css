@@ -60,12 +60,12 @@
 
 @media (max-width: 1024px) {
   .d-hero h1 { font-size: 30px; }
-  .d-hero-in { padding: 10px 30px 90px; }
+  .d-hero-in { padding: 10px 30px 60px; }
 }
 @media (max-width: 767px) {
   .d-hero { padding: 20px 20px 0; }
-  .d-hero-in { min-height: 20vh; display: flex; flex-direction: column; justify-content: flex-end; }
-  .d-hero h1 { font-size: 25px; }
+  .d-hero-in { padding: 10px 0 28px; }
+  .d-hero h1 { font-size: 25px; margin-bottom: 14px; }
   .dots { padding: 2px 0; }
   .dots span { width: 45%; }
 
@@ -74,14 +74,21 @@
       linear-gradient(rgba(244, 244, 244, 0.89), rgba(244, 244, 244, 0.89)),
       url("/assets/img/samuel-zeller-110931-unsplash-800.webp");
   }
-  .d-card { display: block; padding: 5px; }
+  .d-process { padding-top: 16px; }
+  .d-cards { padding: 8px; }
+  .d-card { display: block; padding: 14px 14px 18px; margin: 8px 0; }
   .d-card-img { padding: 0; margin-bottom: 20px; }
   .d-ibox { display: block; }
   .d-ibox img { margin-bottom: 15px; }
   .d-ibox { padding-bottom: 5px; }
   .d-ibox h2 { margin: 0; }
-  .d-card-txt { padding-left: 0; border-left: 0; }
+  .d-card-txt { padding-left: 0; border-left: 0; line-height: 1.6; }
 
   .d-info-grid { grid-template-columns: 1fr; }
   .d-build-grid { display: block; }
+  .d-info { padding: 10px 0; }
+  .d-box { margin: 8px; padding: 16px; }
+  .d-build { padding: 14px 0 28px; }
+  .d-build-txt { flex-basis: auto; padding: 10px 18px; font-size: 16px; line-height: 1.6; letter-spacing: 0; }
+  .d-build-img { padding: 8px 18px; }
 }

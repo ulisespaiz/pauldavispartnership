@@ -12,6 +12,11 @@
     if (!btn) return;
     var f = btn.getAttribute("data-filter"), shown = 0;
     buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+    // keep the active pill in view when the filter row scrolls (small screens)
+    if (btn.scrollIntoView && bar.scrollWidth > bar.clientWidth) {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      btn.scrollIntoView({ block: "nearest", inline: "center", behavior: reduce ? "auto" : "smooth" });
+    }
     items.forEach(function (it) {
       var show = f === "*" || it.getAttribute("data-category") === f;
       it.hidden = !show;

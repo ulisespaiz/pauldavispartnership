@@ -70,6 +70,7 @@ button { font: inherit; }
   transition: background-color 0.3s ease;
 }
 .pdp-header-nav a:hover, .pdp-header-nav a:focus-visible { background-color: rgba(255, 255, 255, 0.1); }
+.pdp-header-logo img, .pdp-footer-logo img { max-width: 100%; }
 
 .pdp-mobile-toggle { display: none; padding: 0.5rem; background: transparent; border: 0; cursor: pointer; }
 .pdp-mobile-toggle svg { width: 32px; height: 32px; stroke: var(--white); display: block; }
@@ -114,9 +115,15 @@ body.menu-open { overflow: hidden; }
   .pdp-mobile-toggle { display: block; }
 }
 @media (max-width: 600px) {
-  .pdp-header-container { padding: 0.75rem 1rem; }
-  .pdp-header-logo img { height: 60px; }
-  .pdp-mobile-menu { width: 280px; }
+  .pdp-header { padding: 4px 0; }
+  .pdp-header-container { padding: 0.5rem 1rem; }
+  .pdp-header-logo img { height: 52px; }
+  .pdp-mobile-menu { width: min(280px, 86vw); }
+}
+@media (max-width: 900px) {
+  /* 44px tap targets for the menu controls */
+  .pdp-mobile-toggle { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  .pdp-mobile-close { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
 }
 
 /* ---------- Footer ---------- */
@@ -133,7 +140,7 @@ body.menu-open { overflow: hidden; }
   text-transform: uppercase; letter-spacing: 0.5px;
 }
 .pdp-footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
-.pdp-footer-links a { color: var(--white); text-decoration: none; text-underline-offset: 3px; }
+.pdp-footer-links a { color: var(--white); text-decoration: none; text-underline-offset: 3px; transition: opacity 0.2s ease; }
 .pdp-footer-links a:hover { text-decoration: underline; }
 .pdp-footer-bottom {
   max-width: var(--wrap); margin: 0 auto; padding: 2rem 2rem 0;
@@ -153,6 +160,12 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 480px) {
   .pdp-footer-main { gap: 1.5rem; }
   .pdp-footer-heading { font-size: 1rem; margin-bottom: 1rem; }
+}
+@media (max-width: 767px) {
+  .pdp-footer-links { gap: 0; }
+  .pdp-footer-links a { display: flex; align-items: center; min-height: 44px; }
+  .pdp-footer-description { max-width: none; }
+  .pdp-footer-copyright { font-size: 0.875rem; }
 }
 
 /* ---------- Shared helpers for page sections ---------- */
