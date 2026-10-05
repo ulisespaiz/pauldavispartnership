@@ -192,3 +192,6 @@ body.menu-open { overflow: hidden; }
 .carousel-dots { position: absolute; bottom: 10px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 2; }
 .carousel-dots button { width: 10px; height: 10px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: rgba(255, 255, 255, 0.5); }
 .carousel-dots button[aria-current="true"] { background: #fff; }
+@media (scripting: none) {
+  .reveal { opacity: 1; transform: none; }
+}
