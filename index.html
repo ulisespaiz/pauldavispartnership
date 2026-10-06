@@ -1,594 +1,259 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Paul Davis Partnership — Architectural Design Studio</title>
-    <meta
-      name="description"
-      content="A premier full-service architectural firm in Monterey County dedicated to creating inspiring, functional, and sustainable spaces since 1984."
-    />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Paul Davis Partnership | Architects &amp; Planners in Monterey County</title>
+  <meta name="description" content="Full-service architecture firm serving Monterey County since 1984: custom homes, historic restoration, affordable and senior housing, commercial and civic projects.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#3c797d">
+  <link rel="canonical" href="https://pauldavispartnership.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Paul Davis Partnership">
+  <meta property="og:title" content="The Paul Davis Partnership | Architects &amp; Planners in Monterey County">
+  <meta property="og:description" content="Full-service architecture firm serving Monterey County since 1984: custom homes, historic restoration, affordable and senior housing, commercial and civic projects.">
+  <meta property="og:url" content="https://pauldavispartnership.com/">
+  <meta property="og:image" content="https://pauldavispartnership.com/assets/img/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Paul Davis Partnership, Architects &amp; Planners in Monterey County">
+  <meta name="twitter:image" content="https://pauldavispartnership.com/assets/img/og-default.jpg">
+  <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css?v=202610052302">
+  <link rel="stylesheet" href="/assets/css/home.css?v=202610052302">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "additionalType": "https://en.wikipedia.org/wiki/Architecture_firm", "@id": "https://pauldavispartnership.com/#organization", "name": "The Paul Davis Partnership", "alternateName": "Paul Davis Partnership", "url": "https://pauldavispartnership.com/", "logo": "https://pauldavispartnership.com/assets/img/pauldavislogo-tightly-cropped-1.webp", "image": "https://pauldavispartnership.com/assets/img/og-default.jpg", "description": "Full-service architecture firm serving Monterey County since 1984: custom homes, historic restoration, affordable and senior housing, commercial and civic projects.", "telephone": "+1-831-373-2784", "foundingDate": "1984", "areaServed": ["Monterey County, CA", "Monterey Bay, CA", "Central Coast, CA"], "employee": [{"@type": "Person", "name": "Paul E. Davis", "honorificSuffix": "AIA", "jobTitle": "Partner, Retired"}, {"@type": "Person", "name": "Paul W. Davis", "honorificSuffix": "AIA", "jobTitle": "Partner, Principal Architect, Design & Programming"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-  </head>
-  <body>
-    <!-- ============================================================
-     HEADER
-     ============================================================ -->
-    <header class="site-header" id="siteHeader">
-      <div class="header-inner">
-        <div class="header-logo">
-          <a href="index.html" aria-label="Paul Davis Partnership – Home">
-            <img
-              src="assets/img/pauldavislogo.webp"
-              alt="The Paul Davis Partnership"
-            />
-          </a>
-        </div>
-
-        <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="projects.html" class="nav-link">Projects</a>
-          <a href="sustainability.html" class="nav-link">Sustainability</a>
-          <a href="design.html" class="nav-link">Design</a>
-          <a href="philosophy.html" class="nav-link">Philosophy</a>
-          <a href="contact.html" class="nav-cta">Contact</a>
-        </nav>
-
-        <button
-          class="mobile-toggle"
-          id="mobileToggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+  <header class="pdp-header" id="top">
+    <div class="pdp-header-container">
+      <div class="pdp-header-logo">
+        <a href="/" aria-label="The Paul Davis Partnership home"><img src="/assets/img/logo.svg" alt="The Paul Davis Partnership" width="109" height="80"></a>
+      </div>
+      <nav class="pdp-header-nav" aria-label="Primary">
+        <a href="/" aria-current="page">HOME</a>
+        <a href="/projects/">PROJECTS</a>
+        <a href="/sustainability/">SUSTAINABILITY</a>
+        <a href="/design/">DESIGN</a>
+        <a href="/philosophy/">PHILOSOPHY</a>
+        <a href="/contact/" class="nav-cta">CONTACT</a>
+        <a class="pdp-header-phone" href="tel:+18313732784"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(831) 373-2784</a>
+      </nav>
+      <button class="pdp-mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div class="pdp-mobile-overlay"></div>
+    <div class="pdp-mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="pdp-mobile-header">
+        <div class="pdp-mobile-logo"><img src="/assets/img/logo.svg" alt="The Paul Davis Partnership" width="76" height="56"></div>
+        <button class="pdp-mobile-close" type="button" aria-label="Close menu">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-
-      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="sustainability.html">Sustainability</a></li>
-          <li><a href="design.html">Design</a></li>
-          <li><a href="philosophy.html">Philosophy</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <nav class="pdp-mobile-nav" aria-label="Mobile">
+        <a href="/" aria-current="page">HOME</a>
+        <a href="/projects/">PROJECTS</a>
+        <a href="/sustainability/">SUSTAINABILITY</a>
+        <a href="/design/">DESIGN</a>
+        <a href="/philosophy/">PHILOSOPHY</a>
+        <a href="/contact/">CONTACT</a>
       </nav>
-    </header>
+      <div class="pdp-mobile-contact">
+        <a class="btn-call" href="tel:+18313732784"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (831) 373-2784</a>
+        <a class="btn-ghost" href="/contact/">Contact our team</a>
+        <p>Serving Monterey County &amp; the Central Coast</p>
+      </div>
+    </div>
+  </header>
 
-    <!-- ============================================================
-     HERO
-     ============================================================ -->
-    <section class="hero-section" id="home">
+  <main id="main">
+    <section class="hero">
       <div class="hero-inner">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Monterey Bay · Est. 1984</span>
-          <h1 class="hero-title">
-            Designing <em>Exceptional</em> Spaces in Monterey County and Beyond
-          </h1>
-          <p class="hero-subtitle">
-            A premier full-service architectural firm dedicated to creating
-            inspiring and functional spaces. Deep roots in Monterey County —
-            transforming the architectural landscape of the region and beyond.
-          </p>
-          <div class="hero-actions">
-            <a href="projects.html" class="btn-primary">View Our Projects</a>
-            <a href="contact.html" class="btn-ghost">Get in Touch</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-image-wrap">
-        <img
-          src="assets/img/hero-image.webp"
-          alt="Architectural rendering of a modern building designed by Paul Davis Partnership"
-          class="hero-image"
-        />
-      </div>
-
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span
-            class="hero-stat-number stat-count"
-            data-count="40"
-            data-suffix="+"
-            >40+</span
-          >
-          <span class="hero-stat-label">Years of Practice</span>
-        </div>
-        <div class="hero-stat">
-          <span
-            class="hero-stat-number stat-count"
-            data-count="300"
-            data-suffix="+"
-            >300+</span
-          >
-          <span class="hero-stat-label">Projects Completed</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-number stat-count" data-count="6">6</span>
-          <span class="hero-stat-label">Project Typologies</span>
-        </div>
+        <p class="hero-kicker reveal">Welcome to The Paul Davis Partnership</p>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <h1 class="hero-title reveal">Designing Exceptional Spaces in Monterey County and Beyond</h1>
+        <p class="hero-text reveal">Welcome to The Paul Davis Partnership, a premier full-service architectural firm dedicated to creating inspiring and functional spaces. With our deep roots in Monterey County, we have been transforming the architectural landscape of the region and beyond.</p>
       </div>
     </section>
 
-    <!-- ============================================================
-     ABOUT US — Light editorial split
-     ============================================================ -->
-    <section class="about-section" id="about">
-      <div class="about-wrap">
-        <!-- Top row: eyebrow + heading left, learn more right -->
-        <div class="about-top-row">
-          <div class="about-top-left">
-            <span class="about-section-tag">About Us</span>
-            <h2 class="about-heading">
-              Monterey Bay's Premier Architectural Design Studio
-              <em>Since 1984</em>
-            </h2>
-          </div>
-          <div class="about-top-right">
-            <a href="philosophy.html" class="about-cta">Read more</a>
-          </div>
+    <section class="mv">
+      <div class="mv-grid">
+        <article class="mv-card reveal">
+          <span class="mv-icon"><svg viewBox="0 0 352 512" aria-hidden="true" focusable="false"><path d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16 16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06 459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32 7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7 2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0 44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42 92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64 59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24 60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0 0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55 260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"/></svg></span>
+          <h2 class="mv-title">Mission:</h2>
+          <p>At The Paul Davis Partnership, we are dedicated to designing spaces that reflect the highest standards of functionality, sustainability, and aesthetics. We strive to create architecture that integrates seamlessly with its environment and inspires the people who interact with it.”</p>
+        </article>
+        <article class="mv-card reveal">
+          <span class="mv-icon"><svg viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm144 418c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V118c0-3.3 2.7-6 6-6h42v36c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-36h42c3.3 0 6 2.7 6 6z"/></svg></span>
+          <h2 class="mv-title">Values</h2>
+          <p>Innovation: We continually push the boundaries of design, integrating cutting-edge technologies and methods into our work. Sustainability: We are committed to creating designs that are environmentally responsible and resource-efficient, from planning to demolition.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-container">
+        <div class="about-head">
+          <h2 class="about-title">About Us</h2>
+          <h3 class="about-sub">Monterey Bay's Premier Architectural Design Studio Since 1984</h3>
         </div>
-
-        <!-- Bottom row: 2-col text grid left, sticky image right -->
-        <div class="about-bottom-row">
-          <div class="about-text-col">
-            <p>
-              At The Paul Davis Partnership, we believe architecture transcends
-              mere building design — it forms the very infrastructure of
-              community. By leading a creative and collaborative process, we
-              deliver functional, sustainable, and distinctive projects.
-            </p>
-            <p>
-              Our commitment to diversity in architecture sees us engaging in a
-              variety of projects, from civic structures and urban design to
-              churches, commercial buildings, hotel resorts, mixed-use
-              developments, and custom residences.
-            </p>
-            <p>
-              As dedicated professionals and active citizens, our principals
-              contribute to both local and professional communities, serving on
-              boards for the American Institute of Architects and various cities
-              and charitable organizations in the Monterey area.
-            </p>
-            <p>
-              Trusted by our clients and cherished by our community, we pledge
-              to leverage our architectural expertise to inspire and realize
-              both private and public projects that enrich our environment and
-              community life.
-            </p>
+        <div class="about-content">
+          <p>At The Paul Davis Partnership, we believe architecture transcends mere building design - it forms the very infrastructure of community. By leading a creative and collaborative process, we deliver functional, sustainable, and distinctive projects that serve both our clients and the community, enhancing both the site and its surroundings.</p>
+          <p>Our commitment to diversity in architecture sees us engaging in a variety of projects, from civic structures and urban design to churches, commercial buildings, hotel resorts, mixed-use developments, multi-family communities, and custom residences.</p>
+          <p>As dedicated professionals and active citizens, our principals contribute to both local and professional communities, serving on boards for the American Institute of Architects and various cities and charitable organizations in the Monterey area.</p>
+          <p>Trusted by our clients and cherished by our community, we pledge to leverage our architectural expertise to inspire and realize both private and public projects that enrich our environment and community life.</p>
+        </div>
+        <div class="expertise">
+          <div class="expertise-card">
+            <h3>Residential Design</h3>
+            <ul>
+              <li>Custom Homes</li>
+              <li>Historic Renovations</li>
+              <li>Multi-Family Communities</li>
+              <li>Sustainable Living Spaces</li>
+            </ul>
           </div>
-
-          <!-- Image: sticky, bleeds to right edge -->
-          <div class="about-img-panel">
-            <img
-              src="assets/img/about-image.webp"
-              alt="Paul Davis Partnership architectural work"
-              class="about-img"
-              loading="lazy"
-            />
+          <div class="expertise-card">
+            <h3>Commercial Projects</h3>
+            <ul>
+              <li>Office Buildings</li>
+              <li>Retail Developments</li>
+              <li>Hospitality &amp; Resorts</li>
+              <li>Mixed-Use Developments</li>
+            </ul>
+          </div>
+          <div class="expertise-card">
+            <h3>Community Spaces</h3>
+            <ul>
+              <li>Civic Buildings</li>
+              <li>Educational Facilities</li>
+              <li>Religious Structures</li>
+              <li>Urban Planning &amp; Design</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-     MISSION & VALUES — Dark teal strip
-     ============================================================ -->
-    <section class="mv-section">
-      <div class="mv-grid-wrap">
-        <div class="mv-grid">
-          <div class="mv-card">
-            <span class="mv-card-label">Our Mission</span>
-            <h3 class="mv-card-title">
-              Functionality, sustainability &amp; aesthetics
-            </h3>
-            <p class="mv-card-text">
-              At The Paul Davis Partnership, we are dedicated to designing
-              spaces that reflect the highest standards of functionality,
-              sustainability, and aesthetics. We strive to create architecture
-              that integrates seamlessly with its environment and inspires the
-              people who interact with it.
-            </p>
-          </div>
-
-          <div class="mv-card">
-            <span class="mv-card-label">Our Values</span>
-            <h3 class="mv-card-title">Innovation &amp; responsibility</h3>
-            <p class="mv-card-text">
-              <strong>Innovation:</strong> We continually push the boundaries of
-              design, integrating cutting-edge technologies and methods into our
-              work.<br /><br />
-              <strong>Sustainability:</strong> We are committed to creating
-              designs that are environmentally responsible and
-              resource-efficient, from planning to demolition.
-            </p>
+    <section class="proj" aria-labelledby="proj-h">
+      <div class="proj-wrap">
+        <div class="proj-icon" aria-hidden="true"><svg viewBox="0 0 576 512" focusable="false"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg></div>
+        <h2 class="proj-title reveal" id="proj-h">Our Projects</h2>
+        <div class="proj-rule" aria-hidden="true"></div>
+        <div class="proj-gallery">
+          <div class="proj-grid">
+            <figure class="proj-item">
+              <img src="/assets/img/holman1.webp" width="509" height="331" alt="Holman Ranch, Carmel Valley Cover Photo" loading="lazy" decoding="async">
+              <figcaption class="proj-cap"><div class="proj-cap-in">
+                <h3 class="proj-name"><a href="/holman-ranch-carmel-valley/">Holman Ranch, Carmel Valley</a></h3>
+                <div class="proj-desc"><p>Restoration of 6,000 SF hacienda originally built in 1928.</p>
+<p>Paul W. Davis and Stocker &amp; Allaire General Contractors worked together to draft a restoration plan for the 6,000-square-foot hacienda originally designed for San Francisco businessman Gordon Armsby in 1928 to bring its design back to that era.</p></div>
+              </div></figcaption>
+            </figure>
+            <figure class="proj-item">
+              <img src="/assets/img/pdpbuilding.webp" width="509" height="331" alt="El Dorado Street Cover Photo" loading="lazy" decoding="async">
+              <figcaption class="proj-cap"><div class="proj-cap-in">
+                <h3 class="proj-name"><a href="/286-eldorado-street/">286 Eldorado Street</a></h3>
+                <div class="proj-desc"><p>Offices and Residence<br>
+286 Eldorado Street</p>
+<p>Completed in 2000, this 4,608 SF mixed-use building includes 2,932 SF of commercial office space with 1,675 SF private residence above.</p>
+<p>Careful study and use of the site allowed for maximum square footage on a small building lot.</p>
+<p>An underground parking garage keeps parking on site.</p>
+<p>Construction types include a post-tension slab over parking</p></div>
+              </div></figcaption>
+            </figure>
+            <figure class="proj-item">
+              <img src="/assets/img/chispa-la-gloria-web.webp" width="576" height="287" alt="" loading="lazy" decoding="async">
+              <figcaption class="proj-cap"><div class="proj-cap-in">
+                <h3 class="proj-name"><a href="/la-gloria-senior-apartments/">La Gloria Senior Apartments</a></h3>
+                <div class="proj-desc"><ul>
+<li>Completed in 2011</li>
+<li>Twenty-three one-bedroom units</li>
+<li>Residents’ Center with community meeting room and laundry room.</li>
+<li>A community garden is provided for residents.</li>
+<li>See write-up in American Builders Quarterly</li>
+</ul></div>
+              </div></figcaption>
+            </figure>
+            <figure class="proj-item">
+              <img src="/assets/img/mogo-carmel.webp" width="576" height="367" alt="MoGo Urgent Care Carmel Cover Photo" loading="lazy" decoding="async">
+              <figcaption class="proj-cap"><div class="proj-cap-in">
+                <h3 class="proj-name"><a href="/mogo-urgent-care-carmel/">MoGo Urgent Care Carmel</a></h3>
+                <div class="proj-desc"><p>MoGo Urgent Care<br>
+Carmel, CA<br>
+3,180 SFS remodel of an existing commercial building.<br>
+Completed in 2020<br>
+Contractor: Avila Construction</p></div>
+              </div></figcaption>
+            </figure>
+            <figure class="proj-item">
+              <img src="/assets/img/mogomonterey.webp" width="473" height="300" alt="MoGo Urgent Care Monterey Cover Photo" loading="lazy" decoding="async">
+              <figcaption class="proj-cap"><div class="proj-cap-in">
+                <h3 class="proj-name"><a href="/mogo-urgent-care-monterey/">MoGo Urgent Care Monterey</a></h3>
+                <div class="proj-desc"><p>MoGo Urgent Care<br>
+Monterey, CA<br>
+3,180 SF tenant improvement to an existing commercial building<br>
+Completed in 2020<br>
+Contractor: Avila Construction</p></div>
+              </div></figcaption>
+            </figure>
+            <figure class="proj-item">
+              <img src="/assets/img/sl1.webp" width="509" height="331" alt="Santa Lucia Preserve 1 Cover Photo" loading="lazy" decoding="async">
+              <figcaption class="proj-cap"><div class="proj-cap-in">
+                <h3 class="proj-name"><a href="/sainta-lucia-preserve-1/">Sainta Lucia Preserve 1</a></h3>
+                <div class="proj-desc"><p>8,400 SF home located in a private reserve in Carmel Valley.</p>
+<p>Home was set into the side of a hill to capture beautiful open space views on different levels created for various types of living/entertaining arrangements. Project included main residence, guest house, caretaker’s cottage and barn.</p>
+<p>Richard M. McPherson Landscape Architecture</p>
+<p>General Contractor: Santa Lucia Builders</p>
+<p>Interior Design: Andrea Bartholick Pace</p></div>
+              </div></figcaption>
+            </figure>
           </div>
         </div>
+        <div class="proj-more"><a href="/projects/">View All</a></div>
       </div>
     </section>
-    <section class="spec-section" id="design">
-      <div class="container">
-        <div class="spec-header">
-          <div class="spec-header-left">
-            <span class="label-eyebrow">Our Expertise</span>
-            <h2 class="spec-heading">What we design</h2>
-          </div>
-          <div class="spec-header-right">
-            <p>
-              From intimate custom residences to large-scale civic
-              infrastructure, our practice spans the full breadth of the built
-              environment — each project approached with equal care and rigor.
-            </p>
-          </div>
-        </div>
+  </main>
 
-        <div class="spec-grid">
-          <div class="spec-card">
-            <div class="spec-card-body">
-              <div>
-                <span class="spec-card-number">01</span>
-                <div class="spec-card-title">Residential Design</div>
-              </div>
-              <ul>
-                <li>Custom Homes</li>
-                <li>Historic Renovations</li>
-                <li>Multi-Family Communities</li>
-                <li>Sustainable Living Spaces</li>
-              </ul>
-            </div>
-            <div class="spec-card-img-wrap">
-              <img
-                src="assets/img/residential-design.webp"
-                alt="Residential Design — Custom Home"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="spec-card">
-            <div class="spec-card-body">
-              <div>
-                <span class="spec-card-number">02</span>
-                <div class="spec-card-title">Commercial Projects</div>
-              </div>
-              <ul>
-                <li>Office Buildings</li>
-                <li>Retail Developments</li>
-                <li>Hospitality &amp; Resorts</li>
-                <li>Mixed-Use Developments</li>
-              </ul>
-            </div>
-            <div class="spec-card-img-wrap">
-              <img
-                src="assets/img/commercial-projects.webp"
-                alt="Commercial Projects — Office Building"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="spec-card">
-            <div class="spec-card-body">
-              <div>
-                <span class="spec-card-number">03</span>
-                <div class="spec-card-title">Community Spaces</div>
-              </div>
-              <ul>
-                <li>Civic Buildings</li>
-                <li>Educational Facilities</li>
-                <li>Religious Structures</li>
-                <li>Urban Planning &amp; Design</li>
-              </ul>
-            </div>
-            <div class="spec-card-img-wrap">
-              <img
-                src="assets/img/community-spaces.webp"
-                alt="Community Spaces — Civic Building"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
+  <footer class="pdp-footer">
+    <div class="pdp-footer-main">
+      <div class="pdp-footer-info">
+        <div class="pdp-footer-logo"><img src="/assets/img/logo.svg" alt="The Paul Davis Partnership" width="82" height="60" loading="lazy"></div>
+        <p class="pdp-footer-description">Paul Davis Partnership is a premier architectural firm specializing in sustainable design and innovative building solutions. We create spaces that inspire and endure.</p>
       </div>
-    </section>
-
-    <!-- ============================================================
-     PROJECTS — Asymmetric editorial grid
-     ============================================================ -->
-    <section class="projects-section" id="projects">
-      <div class="container">
-        <div class="projects-header">
-          <div>
-            <span class="label-eyebrow">Portfolio</span>
-            <h2 class="projects-heading">Our Projects</h2>
-            <p class="projects-description">
-              A selection of our most celebrated work — spanning residential,
-              commercial, civic, and mixed-use typologies across Monterey County
-              and beyond.
-            </p>
-          </div>
-          <a href="projects.html" class="view-all-link">View All</a>
-        </div>
-
-        <div class="projects-grid">
-          <a href="projects.html" class="project-card">
-            <div class="project-img-wrap">
-              <img
-                src="https://pauldavispartnership.com/wp-content/uploads/2024/03/holman1-300x195.jpg"
-                alt="Holman Ranch"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-body-inner">
-                <div class="project-tag">Residential</div>
-                <div class="project-name">Holman Ranch</div>
-              </div>
-              <span class="project-arrow"></span>
-            </div>
-          </a>
-
-          <a href="projects.html" class="project-card">
-            <div class="project-img-wrap">
-              <img
-                src="https://pauldavispartnership.com/wp-content/uploads/2024/03/pdpbuilding-300x195.webp"
-                alt="PDP Building"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-body-inner">
-                <div class="project-tag">Commercial</div>
-                <div class="project-name">PDP Building</div>
-              </div>
-              <span class="project-arrow"></span>
-            </div>
-          </a>
-
-          <a href="projects.html" class="project-card">
-            <div class="project-img-wrap">
-              <img
-                src="https://pauldavispartnership.com/wp-content/uploads/2024/08/Chispa-La-Gloria-web-300x149.webp"
-                alt="Chispa La Gloria"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-body-inner">
-                <div class="project-tag">Multi-Family</div>
-                <div class="project-name">Chispa La Gloria</div>
-              </div>
-              <span class="project-arrow"></span>
-            </div>
-          </a>
-
-          <a href="projects.html" class="project-card">
-            <div class="project-img-wrap">
-              <img
-                src="https://pauldavispartnership.com/wp-content/uploads/2024/04/MoGo-Carmel-300x191.webp"
-                alt="MoGo Carmel"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-body-inner">
-                <div class="project-tag">Commercial</div>
-                <div class="project-name">MoGo Urgent Care — Carmel</div>
-              </div>
-              <span class="project-arrow"></span>
-            </div>
-          </a>
-
-          <a href="projects.html" class="project-card">
-            <div class="project-img-wrap">
-              <img
-                src="https://pauldavispartnership.com/wp-content/uploads/2024/04/MoGomonterey-300x190.webp"
-                alt="MoGo Monterey"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-body-inner">
-                <div class="project-tag">Commercial</div>
-                <div class="project-name">MoGo Urgent Care — Monterey</div>
-              </div>
-              <span class="project-arrow"></span>
-            </div>
-          </a>
-
-          <a href="projects.html" class="project-card">
-            <div class="project-img-wrap">
-              <img
-                src="https://pauldavispartnership.com/wp-content/uploads/2024/08/sl1-300x195.webp"
-                alt="Sustainable Living"
-                loading="lazy"
-              />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-body-inner">
-                <div class="project-tag">Residential</div>
-                <div class="project-name">Sustainable Residence</div>
-              </div>
-              <span class="project-arrow"></span>
-            </div>
-          </a>
-        </div>
+      <div class="pdp-footer-links-section">
+        <h2 class="pdp-footer-heading">Quick Links</h2>
+        <nav class="pdp-footer-links" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/sustainability/">Sustainability</a>
+          <a href="/design/">Design</a>
+          <a href="/philosophy/">Philosophy</a>
+          <a href="/contact/">Contact</a>
+        </nav>
       </div>
-    </section>
-
-    <!-- ============================================================
-     PHILOSOPHY — Dark full-bleed quote section
-     ============================================================ -->
-    <section class="philosophy-section" id="philosophy">
-      <div class="container">
-        <div class="philosophy-inner">
-          <div class="philosophy-left">
-            <span class="philosophy-label">Philosophy</span>
-            <h2 class="philosophy-heading">Design that <em>endures</em></h2>
-            <div class="philosophy-img-wrap">
-              <img
-                src="assets/img/render-image.webp"
-                alt="Paul Davis Partnership — architectural craftsmanship"
-                loading="lazy"
-                class="philosophy-img"
-              />
-            </div>
-          </div>
-
-          <div class="philosophy-right">
-            <p>
-              Great architecture is not about trends — it is about understanding
-              place, purpose, and people. Every project we take on begins with
-              listening: to our clients, to the site, to the community. That
-              attentiveness shapes every line we draw.
-            </p>
-            <p>
-              We hold ourselves accountable to both aesthetic ambition and
-              practical integrity. A building should look beautiful on day one
-              and perform beautifully for decades.
-            </p>
-            <a href="philosophy.html" class="btn-teal-outline"
-              >Read Our Philosophy</a
-            >
-          </div>
-        </div>
+      <div class="pdp-footer-contact-section">
+        <h2 class="pdp-footer-heading">Get in Touch</h2>
+        <address class="pdp-footer-contact">
+          <div class="pdp-footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+18313732784">(831) 373-2784</a></div>
+          <div class="pdp-footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="/contact/">Email our team</a></div>
+          <div class="pdp-footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Serving Monterey County &amp; the Central Coast</span></div>
+          <a class="pdp-footer-cta" href="/contact/">Start a project</a>
+        </address>
       </div>
-    </section>
+    </div>
+    <div class="pdp-footer-bottom">
+      <div class="pdp-footer-copyright">© <span data-year>2026</span> The Paul Davis Partnership. All rights reserved.</div>
+      <a class="pdp-footer-top" href="#top">Back to top <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></a>
+    </div>
+  </footer>
 
-    <!-- ============================================================
-     CONTACT — No form. Info + teal CTA block.
-     ============================================================ -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-inner">
-          <div class="contact-left">
-            <span class="label-eyebrow">Contact</span>
-            <h2 class="contact-heading">Let's start<br />a conversation</h2>
-            <p class="contact-body">
-              Whether you're exploring a new project, looking for a
-              collaborator, or simply curious about what we do — we'd love to
-              hear from you.
-            </p>
-            <div class="contact-details">
-              <div class="contact-detail-item">
-                <span class="contact-detail-label">Location</span>
-                <span class="contact-detail-value"
-                  >Monterey County, California</span
-                >
-              </div>
-              <div class="contact-detail-item">
-                <span class="contact-detail-label">Website</span>
-                <span class="contact-detail-value"
-                  >pauldavispartnership.com</span
-                >
-              </div>
-              <div class="contact-detail-item">
-                <span class="contact-detail-label">Member</span>
-                <span class="contact-detail-value"
-                  >AIA Member Firm · Est. 1984</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-right-block">
-            <h3 class="contact-right-heading">
-              Ready to build<br />something lasting?
-            </h3>
-            <p class="contact-right-text">
-              Our team is ready to listen. Share your vision and we'll bring the
-              expertise, care, and craftsmanship it deserves.
-            </p>
-            <a href="contact.html" class="contact-right-cta">Get in Touch</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-     FOOTER
-     ============================================================ -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-grid">
-            <div class="footer-about">
-              <div class="footer-logo">
-                <img
-                  src="assets/img/footer-logo.webp"
-                  alt="The Paul Davis Partnership"
-                />
-              </div>
-              <p>
-                Paul Davis Partnership is a premier architectural firm
-                specializing in sustainable design and innovative building
-                solutions. We create spaces that inspire and endure. Serving
-                Monterey County and beyond since 1984.
-              </p>
-            </div>
-
-            <div class="footer-col">
-              <div class="footer-col-title">Quick Links</div>
-              <nav class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="sustainability.html">Sustainability</a>
-                <a href="design.html">Design</a>
-                <a href="philosophy.html">Philosophy</a>
-                <a href="contact.html">Contact</a>
-              </nav>
-            </div>
-
-            <div class="footer-col">
-              <div class="footer-col-title">Project Types</div>
-              <nav class="footer-links">
-                <a href="projects.html">Historic Restoration</a>
-                <a href="projects.html">Mixed Use</a>
-                <a href="projects.html">Multi-Family &amp; Affordable</a>
-                <a href="projects.html">Civic &amp; Community</a>
-                <a href="projects.html">Commercial</a>
-                <a href="projects.html">Custom Residential</a>
-              </nav>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026 Paul Davis Partnership. All rights reserved.</p>
-          <p>
-            Developed by
-            <a
-              href="https://ghosxt.com/"
-              target="_blank"
-              style="
-                color: rgba(255, 255, 255, 0.75);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-                padding-bottom: 1px;
-              "
-              >Ghosxt</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/index.js"></script>
-  </body>
+  <script src="/assets/js/site.js?v=202610052302" defer></script>
+</body>
 </html>

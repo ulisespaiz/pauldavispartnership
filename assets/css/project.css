@@ -1,0 +1,116 @@
+/* Project detail pages: text column + image (or carousel) column on teal. */
+
+.project { padding: 40px 0; }
+.project-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; align-items: start;
+}
+.project-text, .project-media { margin: 10px; min-width: 0; }
+.project-text { color: var(--white); font-family: Roboto, var(--font-sys); }
+
+.project-title {
+  font-family: var(--font-head); font-size: 22px; font-weight: 600; line-height: 22px;
+  color: var(--white); margin-bottom: 20px;
+}
+.project-sub {
+  font-family: var(--font-head); font-size: 14px; font-weight: 500; line-height: 20px;
+  color: var(--white); margin: 0 0 20px;
+}
+.project-title.reveal { transition-delay: 0.3s; }
+.project-sub.reveal { transition-delay: 0.5s; }
+
+.project-body { font-size: 16px; line-height: 24px; }
+.project-body p { margin: 0 0 14.4px; }
+.project-body ul { padding-left: 40px; }
+
+/* Media: image centred at natural size (max 100% of the column); 37px below it for the dots. */
+.project-media { padding-bottom: 37px; }
+.project-media img { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; }
+
+/* Carousel overrides of the shared styles in site.css */
+.project-media .carousel-track { align-items: flex-start; }
+.project-media .carousel-slide img { width: auto; height: auto; object-fit: initial; }
+.project-media .carousel-arrow {
+  top: calc(50% - 15px); width: 25px; height: 25px; padding: 0; border-radius: 0;
+  background: none; font-size: 0; color: transparent;
+}
+.project-media .carousel-arrow::before {
+  content: ""; width: 25px; height: 25px; opacity: 0.9;
+  background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cpath fill='%23ededed' d='M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z'/%3E%3C/svg%3E");
+}
+.project-media .carousel-next::before { transform: scaleX(-1); }
+.project-media .carousel-arrow:focus-visible,
+.project-media .carousel-dots button:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.project-media .carousel-dots { bottom: 12px; gap: 12px; }
+.project-media .carousel-dots button {
+  position: relative; width: 6px; height: 6px; background: rgba(0, 0, 0, 0.2);
+}
+.project-media .carousel-dots button::after { content: ""; position: absolute; inset: -8px -6px; }
+.project-media .carousel-dots button[aria-current="true"] { background: #000; }
+
+@media (max-width: 1024px) {
+  .project-title { font-size: 20px; line-height: 1.25; }
+  .project-inner { padding: 0 6px; }
+  /* Comfortable touch targets for the carousel controls */
+  .project-media .carousel-arrow {
+    top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(0, 0, 0, 0.28);
+  }
+  .project-media .carousel-arrow::before { width: 22px; height: 22px; }
+  .project-media .carousel-prev { left: 6px; }
+  .project-media .carousel-next { right: 6px; }
+  .project-media { padding-bottom: 44px; }
+  .project-media .carousel-dots { bottom: 0; height: 44px; align-items: center; gap: 0; }
+  .project-media .carousel-dots button {
+    width: 24px; height: 44px; border-radius: 0; background: none;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .project-media .carousel-dots button::after {
+    content: ""; position: static; inset: auto; width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .project-media .carousel-dots button[aria-current="true"] { background: none; }
+  .project-media .carousel-dots button[aria-current="true"]::after { background: #fff; }
+}
+@media (max-width: 767px) {
+  /* Single column: title, subtitle, photo, then the long text (the photo is the point). */
+  .project { padding: 20px 0 8px; }
+  .project-inner { grid-template-columns: 1fr; padding: 0 16px; }
+  .project-text { display: contents; }
+  .project-text > * { order: 3; margin-left: 0; margin-right: 0; }
+  .project-title { order: 0; font-size: 22px; margin: 6px 0 10px; }
+  .project-sub { order: 1; font-size: 15px; line-height: 1.4; margin: 0 0 12px; }
+  .project-media { order: 2; margin: 4px 0 8px; }
+  .project-body { line-height: 1.65; }
+  .project-body ul { padding-left: 24px; }
+  .project-body li { margin-bottom: 6px; }
+}
+
+/* Added project detail: facts, background paragraph, sources (white on teal, understated) */
+.project-extra { margin-top: 8px; }
+.project-h {
+  font-family: var(--font-head); font-size: 12px; font-weight: 600; line-height: 1.4;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--white);
+  margin: 28px 0 10px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+.project-extra p { margin: 0 0 14.4px; font-size: 16px; line-height: 24px; }
+.project-facts { margin: 0; padding: 0; }
+.project-facts > div {
+  display: grid; grid-template-columns: 9.5em 1fr; gap: 0 16px;
+  padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.project-facts > div:last-child { border-bottom: 0; }
+.project-facts dt {
+  font-family: var(--font-head); font-size: 12px; font-weight: 500; line-height: 24px;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--white);
+}
+.project-facts dd { margin: 0; font-size: 15px; line-height: 24px; overflow-wrap: anywhere; }
+.project-sources { list-style: none; margin: 0; padding: 0; }
+.project-sources li { margin: 0 0 8px; font-size: 14px; line-height: 21px; }
+.project-sources a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.project-sources a:hover { text-decoration-thickness: 2px; }
+.project-sources a:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+@media (max-width: 480px) {
+  .project-facts > div { grid-template-columns: 1fr; padding: 9px 0; }
+  .project-facts dt { line-height: 18px; margin-bottom: 2px; }
+}

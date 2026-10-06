@@ -1,0 +1,6 @@
+# Search engines and AI assistants are welcome: being cited is how
+# people find a local architecture firm.
+User-agent: *
+Allow: /
+
+Sitemap: https://pauldavispartnership.com/sitemap.xml
