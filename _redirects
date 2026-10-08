@@ -8,4 +8,6 @@
 /sitemap_index.xml    /sitemap.xml            301
 /page-sitemap.xml     /sitemap.xml            301
 /wp-sitemap.xml       /sitemap.xml            301
-/santa-lucia-preserve-1/  /sainta-lucia-preserve-1/  301
+/sainta-lucia-preserve-1/  /santa-lucia-preserve/  301
+/sainta-lucia-preserve-1   /santa-lucia-preserve/  301
+/santa-lucia-preserve-1/   /santa-lucia-preserve/  301

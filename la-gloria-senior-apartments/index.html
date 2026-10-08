@@ -25,6 +25,7 @@
   <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css?v=202610052302">
   <link rel="stylesheet" href="/assets/css/project.css?v=202610052302">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pauldavispartnership.com/"}, {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://pauldavispartnership.com/projects/"}, {"@type": "ListItem", "position": 3, "name": "La Gloria Senior Apartments", "item": "https://pauldavispartnership.com/la-gloria-senior-apartments/"}]}, {"@type": "CreativeWork", "@id": "https://pauldavispartnership.com/la-gloria-senior-apartments/#project", "name": "La Gloria Senior Apartments", "url": "https://pauldavispartnership.com/la-gloria-senior-apartments/", "description": "La Gloria Senior Apartments, completed 2011: twenty-three one-bedroom units with a residents' center, community meeting room, laundry and community garden.", "genre": "Architecture", "image": ["https://pauldavispartnership.com/assets/img/og/la-gloria-senior-apartments.jpg", "https://pauldavispartnership.com/assets/img/chispa-la-gloria-web.webp"], "creator": {"@id": "https://pauldavispartnership.com/#organization"}, "dateCreated": "2011", "locationCreated": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Salinas", "addressRegion": "CA", "addressCountry": "US"}}}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -75,6 +76,7 @@
     <section class="project">
       <div class="project-inner">
         <div class="project-text">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li><li aria-current="page">La Gloria Senior Apartments</li></ol></nav>
           <h1 class="project-title reveal">La Gloria Senior Apartments</h1>
           <div class="project-body">
           <ul>
@@ -105,8 +107,19 @@
           </div>
         </div>
         <div class="project-media">
-          <img src="/assets/img/chispa-la-gloria-web.webp" width="576" height="287" alt="La Gloria Senior Apartments Photo" fetchpriority="high">
+          <img src="/assets/img/chispa-la-gloria-web.webp" width="576" height="287" alt="Rendering of La Gloria Senior Apartments in Salinas: three-story building with balconies, awnings and a white picket fence" fetchpriority="high">
         </div>
+      </div>
+    </section>
+    <section class="related" aria-labelledby="related-h">
+      <div class="related-inner">
+        <h2 id="related-h">More projects</h2>
+        <ul class="related-grid">
+          <li><a href="/oak-park-community-paso-robles/"><img src="/assets/img/oakpark-800.webp" alt="" width="400" height="300" loading="lazy" decoding="async"><span class="related-name">Oak Park Community, Paso Robles</span><span class="related-meta">Paso Robles, CA</span></a></li>
+          <li><a href="/mogo-urgent-care-carmel/"><img src="/assets/img/mogo-carmel.webp" alt="" width="400" height="300" loading="lazy" decoding="async"><span class="related-name">MoGo Urgent Care Carmel</span><span class="related-meta">Carmel, CA</span></a></li>
+          <li><a href="/mogo-urgent-care-monterey/"><img src="/assets/img/mogomonterey.webp" alt="" width="400" height="300" loading="lazy" decoding="async"><span class="related-name">MoGo Urgent Care Monterey</span><span class="related-meta">Monterey, CA</span></a></li>
+        </ul>
+        <a class="related-all" href="/projects/">View all projects</a>
       </div>
     </section>
   </main>
