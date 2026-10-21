@@ -25,6 +25,7 @@
   <link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css?v=202610052302">
   <link rel="stylesheet" href="/assets/css/project.css?v=202610052302">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pauldavispartnership.com/"}, {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://pauldavispartnership.com/projects/"}, {"@type": "ListItem", "position": 3, "name": "Castro Plaza", "item": "https://pauldavispartnership.com/castro-plaza/"}]}, {"@type": "CreativeWork", "@id": "https://pauldavispartnership.com/castro-plaza/#project", "name": "Castro Plaza", "url": "https://pauldavispartnership.com/castro-plaza/", "description": "Castro Plaza, completed 2007: a 16,000 SF civic project with a library, child and family education center, historical exhibits, meeting rooms and county offices.", "genre": "Architecture", "image": ["https://pauldavispartnership.com/assets/img/og/castro-plaza.jpg", "https://pauldavispartnership.com/assets/img/castro2.webp"], "creator": {"@id": "https://pauldavispartnership.com/#organization"}, "dateCreated": "2007", "locationCreated": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Castroville", "addressRegion": "CA", "addressCountry": "US"}}}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -75,6 +76,7 @@
     <section class="project">
       <div class="project-inner">
         <div class="project-text">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li><li aria-current="page">Castro Plaza</li></ol></nav>
           <h1 class="project-title reveal">Castro Plaza</h1>
           <div class="project-body">
           <p>Castro Plaza<br>Completed 2007<br>The 16,000 SF project includes a new library, child and family educational center, historical exhibits, community meeting facilities and county offices. The plaza originally planned for the town by Juan Castro was restored, complete with a fountain from Castroville’s sister city Guanajuato in Mexico.</p>
@@ -99,8 +101,19 @@
           </div>
         </div>
         <div class="project-media">
-          <img src="/assets/img/castro2.webp" width="509" height="331" alt="Castro Plaza Cover Photo" fetchpriority="high">
+          <img src="/assets/img/castro2.webp" width="509" height="331" alt="Castro Plaza in Castroville: one-story peach stucco building with a tiled corner tower and lawn" fetchpriority="high">
         </div>
+      </div>
+    </section>
+    <section class="related" aria-labelledby="related-h">
+      <div class="related-inner">
+        <h2 id="related-h">More projects</h2>
+        <ul class="related-grid">
+          <li><a href="/santa-lucia-preserve/"><img src="/assets/img/sl1.webp" alt="" width="400" height="300" loading="lazy" decoding="async"><span class="related-name">Santa Lucia Preserve 1</span><span class="related-meta">Carmel Valley, CA</span></a></li>
+          <li><a href="/oak-park-community-paso-robles/"><img src="/assets/img/oakpark-800.webp" alt="" width="400" height="300" loading="lazy" decoding="async"><span class="related-name">Oak Park Community, Paso Robles</span><span class="related-meta">Paso Robles, CA</span></a></li>
+          <li><a href="/seaside-family-health-center/"><img src="/assets/img/seaside-family-health-800.webp" alt="" width="400" height="300" loading="lazy" decoding="async"><span class="related-name">Seaside Family Health Center</span><span class="related-meta">Seaside, CA</span></a></li>
+        </ul>
+        <a class="related-all" href="/projects/">View all projects</a>
       </div>
     </section>
   </main>
