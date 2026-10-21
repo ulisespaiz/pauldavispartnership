@@ -66,3 +66,9 @@
   .ct-lg .ct-photo { width: min(220px, 70%); height: auto; display: block; margin: 0 auto 10px; }
   .ct-md .ct-photo { width: 110px; height: 110px; display: block; margin: 0 auto 10px; }
 }
+
+/* Touch devices of any width: 44px tap targets for phone and email links */
+@media (pointer: coarse) {
+  .ct-list li { min-height: 44px; padding-bottom: 0; }
+  .ct-list a { min-height: 44px; }
+}
