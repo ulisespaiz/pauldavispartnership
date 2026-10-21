@@ -56,6 +56,17 @@
 .pg-text p { margin: 0 0 5px; transform: translateY(40px); transition: transform 0.6s ease; }
 .pg-text ul { margin: 0; padding: 0 0 0 40px; }
 .pg-item:hover .pg-text p, .pg-item:focus-within .pg-text p { transform: none; }
+/* whole tile follows the title link; "Read more" is the visual cue */
+.pg-title a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.pg-more {
+  display: inline-block; margin-top: 14px; padding-bottom: 3px;
+  font-family: var(--font-head); font-size: 14px; font-weight: 500; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--white); border-bottom: 2px solid var(--white);
+  transform: translateY(40px); transition: transform 0.6s ease;
+}
+.pg-more::after { content: "\2192"; display: inline-block; margin-left: 8px; transition: transform 0.3s ease; }
+.pg-item:hover .pg-more, .pg-item:focus-within .pg-more { transform: none; }
+.pg-item:hover .pg-more::after { transform: translateX(4px); }
 
 /* Touch + small screens: always-visible compact caption bar (name only) */
 @media (hover: none), (max-width: 767px) {
@@ -68,6 +79,7 @@
   .pg-title a::after { content: ""; position: absolute; inset: -500px 0; }
   .pg-title a:hover { text-decoration: none; }
   .pg-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .pg-more { display: none; }
   .pg-item:hover > img { transform: none; }
 }
 
@@ -112,6 +124,6 @@
   .pg-title { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pg-text p { transform: none; }
+  .pg-text p, .pg-more { transform: none; }
   .pg-grid > .pg-item { animation: none; }
 }
