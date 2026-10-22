@@ -1,4 +1,4 @@
-// The Paul Davis Partnership — shared behaviour: mobile menu, reveal-on-scroll,
+// The Paul Davis Partnership: shared behaviour: mobile menu, reveal-on-scroll,
 // carousels ([data-carousel]).
 (function () {
   "use strict";
