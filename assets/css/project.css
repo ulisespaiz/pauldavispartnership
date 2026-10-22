@@ -26,6 +26,11 @@
 /* Media: image centred at natural size (max 100% of the column); 37px below it for the dots. */
 .project-media { padding-bottom: 37px; }
 .project-media img { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; }
+/* Wide layout: keep the photo in view beside the long text. Sticky travel is bounded by the .project-inner grid area.
+   Skipped on short viewports (landscape phones) where the carousel dots would be clipped. */
+@media (min-width: 768px) and (min-height: 560px) {
+  .project-media { position: sticky; top: 110px; }
+}
 
 /* Carousel overrides of the shared styles in site.css */
 .project-media .carousel-track { align-items: flex-start; }
@@ -41,12 +46,16 @@
 .project-media .carousel-next::before { transform: scaleX(-1); }
 .project-media .carousel-arrow:focus-visible,
 .project-media .carousel-dots button:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
-.project-media .carousel-dots { bottom: 12px; gap: 12px; }
+.project-media .carousel-dots { bottom: 3px; gap: 0; }
 .project-media .carousel-dots button {
-  position: relative; width: 6px; height: 6px; background: rgba(0, 0, 0, 0.2);
+  width: 24px; height: 24px; border-radius: 0; background: none;
+  display: flex; align-items: center; justify-content: center;
 }
-.project-media .carousel-dots button::after { content: ""; position: absolute; inset: -8px -6px; }
-.project-media .carousel-dots button[aria-current="true"] { background: #000; }
+.project-media .carousel-dots button::after {
+  content: ""; width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.7);
+}
+.project-media .carousel-dots button[aria-current="true"] { background: none; }
+.project-media .carousel-dots button[aria-current="true"]::after { background: #fff; transform: scale(1.5); }
 
 @media (max-width: 1024px) {
   .project-title { font-size: 20px; line-height: 1.25; }
@@ -70,7 +79,7 @@
     background: rgba(255, 255, 255, 0.4);
   }
   .project-media .carousel-dots button[aria-current="true"] { background: none; }
-  .project-media .carousel-dots button[aria-current="true"]::after { background: #fff; }
+  .project-media .carousel-dots button[aria-current="true"]::after { background: #fff; transform: none; }
 }
 @media (max-width: 767px) {
   /* Single column: title, subtitle, photo, then the long text (the photo is the point). */
@@ -110,6 +119,11 @@
 .project-sources a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .project-sources a:hover { text-decoration-thickness: 2px; }
 .project-sources a:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+@media (max-width: 767px), (pointer: coarse) {
+  /* Touch-sized link rows */
+  .project-sources li { margin: 0; }
+  .project-sources a { display: inline-block; padding: 12px 0; }
+}
 @media (max-width: 480px) {
   .project-facts > div { grid-template-columns: 1fr; padding: 9px 0; }
   .project-facts dt { line-height: 18px; margin-bottom: 2px; }
