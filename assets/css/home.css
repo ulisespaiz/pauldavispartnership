@@ -48,7 +48,7 @@
 }
 .about-head { margin: 8px 0 30px; padding-bottom: 15px; border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
 .about-title { margin: 0 0 10px; font-size: 48px; line-height: 1.2; font-weight: 700; letter-spacing: 0.5px; }
-.about-sub { margin: 0 0 16px; font-size: 20px; line-height: 1.2; font-weight: 400; color: rgba(255, 255, 255, 0.9); }
+.about-sub { margin: 0 0 16px; font-size: 20px; line-height: 1.2; font-weight: 400; color: rgba(255, 255, 255, 0.9); text-wrap: balance; }
 .about-content {
   background: rgba(0, 0, 0, 0.15); border-radius: 8px; padding: 35px; margin-bottom: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -93,7 +93,7 @@
 .proj-name { margin: 8px 0 16px; font-size: 17px; line-height: 1.2; font-weight: 500; color: #fff; }
 .proj-name a { color: inherit; text-decoration: none; }
 .proj-name a::after { content: ""; position: absolute; inset: -400px -15px -400px -15px; }
-.proj-item:has(.proj-name a:focus-visible) { outline: 3px solid var(--teal-dark); outline-offset: -3px; }
+.proj-item:has(.proj-name a:focus-visible) { outline: 3px solid #fff; outline-offset: -3px; }
 .proj-name a:focus-visible { outline: none; }
 .proj-desc { font-size: 15px; line-height: 24px; }
 .proj-desc p { margin: 0 0 5px; }
@@ -123,7 +123,7 @@
 /* ---------- Touch + small screens: always-visible compact caption bar ---------- */
 @media (hover: none), (max-width: 767px) {
   .proj-cap {
-    inset: auto 0 0 0; padding: 36px 14px 12px; align-items: flex-end;
+    inset: auto 0 0 0; padding: 36px 14px 12px; align-items: flex-end; overflow: visible;
     opacity: 1; background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.65) 55%, rgba(0, 0, 0, 0) 100%);
   }
   .proj-cap::before { display: none; }

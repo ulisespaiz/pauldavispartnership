@@ -18,7 +18,7 @@
     document.body.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     menu.setAttribute("aria-hidden", String(!open));
-    if (open) closeBtn.focus({ preventScroll: true }); else toggle.focus();
+    if (open) closeBtn.focus({ preventScroll: true }); else toggle.focus({ preventScroll: true });
   }
   if (toggle && menu) {
     toggle.addEventListener("click", function () { setMenu(true); });
@@ -37,7 +37,10 @@
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
-        header.classList.toggle("is-scrolled", window.scrollY > 40);
+        // Hysteresis wider than the header's height change (up to 57px), so compacting it
+        // cannot pull scrollY back across the threshold and make it flicker
+        var y = window.scrollY;
+        header.classList.toggle("is-scrolled", header.classList.contains("is-scrolled") ? y > 8 : y > 72);
         ticking = false;
       });
     };

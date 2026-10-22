@@ -295,6 +295,11 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 1024px) {
   .carousel-pause { left: 6px; bottom: 0; width: 44px; height: 44px; }
 }
+@media (forced-colors: active) {
+  .carousel-pause { border: 2px solid ButtonText; background: ButtonFace; }
+  .carousel-pause::before { background: ButtonText; }
+  .carousel-pause.is-paused::before { background: none; border-left-color: ButtonText; }
+}
 @media (scripting: none) {
   .reveal { opacity: 1; transform: none; }
 }

@@ -90,7 +90,7 @@
   .p-ib-flex { display: block; text-align: center; }
   .p-ib figure { width: 55%; margin: 0 auto 15px; }
   .p-ib-flex h3 { margin-top: 0; }
-  .p-ib img { max-width: 100%; }
+  .p-ib img { display: block; max-width: 100%; margin: 0 auto; }
   .p-ib-txt { width: auto; }
   .p-row2 .p-ib figure { width: 55%; }
 }
